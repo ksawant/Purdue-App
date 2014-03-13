@@ -1,11 +1,10 @@
 Purdue-App
 ==========
 
-### Descriptions
+### Description
 - Complete redesign of the current Purdue App with iOS 7 Dynamic blur
 - Compatibility: iOS 7+ with ARC
 - Open-Source Library used:
-<<<<<<< HEAD
     - [FMDB](https://github.com/ccgus/fmdb)
     - [MRProgress](https://github.com/mrackwitz/MRProgress)
     - [SuProgress](https://github.com/MobileMakersAcademy/SuProgress)
@@ -23,7 +22,6 @@ Purdue-App
 - 04/28 ~ 05/04 App Store submission
 
 ### Localizations
-=======
     - MRProgressHUD
     - FMDB
     - MWPhotoBrowser
@@ -32,7 +30,6 @@ Purdue-App
     - SuProgress
 
 ### Languages
->>>>>>> 0a3ee1d... Update README.md
 - English
 - Spanish
 - Traditional Chinese
@@ -59,13 +56,3 @@ Purdue-App
 - About (Profile Picture + Name)
 - My Bandwidth
 - Game scores/schedules
-<<<<<<< HEAD
-=======
-
-### Plan
-- 03/12 ~ 04/06 Build up all functionalities (target for iPhone)
-- 04/07 ~ 04/13 iPad compatibility
-- 04/14 ~ 04/20 Bug Fixes
-- 04/21 ~ 04/27 Test in real device
-- 04/28 ~ 05/04 App Store submission
->>>>>>> 0a3ee1d... Update README.md
