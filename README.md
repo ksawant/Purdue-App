@@ -21,15 +21,7 @@ Purdue-App
 - 04/21 ~ 04/27 Test on real devices
 - 04/28 ~ 05/04 App Store submission
 
-### Localizations
-    - MRProgressHUD
-    - FMDB
-    - MWPhotoBrowser
-    - CWStatusBarNotification
-    - Reachability (Apple)
-    - SuProgress
-
-### Languages
+### Localization
 - English
 - Spanish
 - Traditional Chinese
@@ -52,7 +44,7 @@ Purdue-App
 - Weather (Current, Hours, Days)
 - Purdue Store
 - Library Hours
-- Co-rec
+- Co-Rec
 - About (Profile Picture + Name)
 - My Bandwidth
 - Game scores/schedules
