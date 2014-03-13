@@ -1,0 +1,43 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <MapKit/MapKit.h>
+#endif
+
+// Debug Configurations
+#define DEBUG_MyPurdue 1
+
+// Useful iOS Macros
+#define ApplicationDelegate                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define UserDefaults                        [NSUserDefaults standardUserDefaults]
+#define SharedApplication                   [UIApplication sharedApplication]
+#define MainScreen                          [UIScreen mainScreen]
+#define StatusBarHeight						[[UIApplication sharedApplication] statusBarFrame].size.height
+#define NavBarHeight                        self.navigationController.navigationBar.bounds.size.height
+#define TabBarHeight                        self.tabBarController.tabBar.bounds.size.height
+#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+#define RGB(r, g, b)                        [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define RGBA(r, g, b, a)                    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define HEXCOLOR(c)                         [UIColor colorWithRed:((c>>16)&0xFF)/255.0 green:((c>>8)&0xFF)/255.0 blue:(c&0xFF)/255.0 alpha:1.0];
+
+// Purdue Colors
+#define PUGoldColor_RealCl					[UIColor colorWithRed:177./255 green:148./255 blue:108./255 alpha:1]
+#define PUGoldColor_TabBar					[UIColor colorWithRed:200./255 green:160./255 blue:110./255 alpha:1]
+#define PUGoldColor_NavBar					[UIColor colorWithRed:177./255 green:148./255 blue:108./255 alpha:1]
+
+// DoubleMaps API
+#define Bus_Routes_URL                      @"http://citybus.doublemap.com/map/v2/routes"
+#define Bus_Stops_URL                       @"http://citybus.doublemap.com/map/v2/stops"
