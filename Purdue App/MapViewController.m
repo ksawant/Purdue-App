@@ -37,7 +37,7 @@
     
     // Add Search Bar on top of the MapView
     UISearchBar *mapSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, StatusBarHeight+NavBarHeight, ScreenWidth, 44)];
-    mapSearchBar.placeholder = @"Search ...";
+    mapSearchBar.placeholder = @"Search";
     mapSearchBar.showsCancelButton = YES;
     mapSearchBar.delegate = self;
     [self.view addSubview:mapSearchBar];

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */; };
+		5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC07EA218D1598D00577F92 /* StopDetailViewController.m */; };
 		5EE9206718D0EB7B003EE2E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */; };
 		5EE9206A18D0EB9E003EE2E6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9206918D0EB9E003EE2E6 /* MapViewController.m */; };
 		5EE9208D18D0EC84003EE2E6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9207F18D0EC84003EE2E6 /* Reachability.m */; };
@@ -96,6 +97,8 @@
 /* Begin PBXFileReference section */
 		5EB99F7818CFB1F60073C4E8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		5EC07EA118D1598D00577F92 /* StopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopDetailViewController.h; sourceTree = "<group>"; };
+		5EC07EA218D1598D00577F92 /* StopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopDetailViewController.m; sourceTree = "<group>"; };
 		5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5EE9206818D0EB9E003EE2E6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		5EE9206918D0EB9E003EE2E6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
@@ -599,6 +602,8 @@
 			children = (
 				5EE9217418D0FE5F003EE2E6 /* BusViewController.h */,
 				5EE9217518D0FE5F003EE2E6 /* BusViewController.m */,
+				5EC07EA118D1598D00577F92 /* StopDetailViewController.h */,
+				5EC07EA218D1598D00577F92 /* StopDetailViewController.m */,
 			);
 			name = Bus;
 			sourceTree = "<group>";
@@ -763,6 +768,7 @@
 				5EE9214718D0ECF4003EE2E6 /* NSData+ImageContentType.m in Sources */,
 				5EE9216118D0ED21003EE2E6 /* MZDayPickerCell.m in Sources */,
 				5EE9213218D0ECF4003EE2E6 /* MWZoomingScrollView.m in Sources */,
+				5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */,
 				5EE9214518D0ECF4003EE2E6 /* MKAnnotationView+WebCache.m in Sources */,
 				5EE9209E18D0ECA3003EE2E6 /* FMDatabase.m in Sources */,
 				5EE9214F18D0ECF4003EE2E6 /* UIButton+WebCache.m in Sources */,

@@ -19,10 +19,12 @@ typedef enum {
 @end
 
 @implementation BusViewController {
-    NSMutableArray *routesArray;
-    NSMutableArray *stopsArray;
     TableViewOption currentOption;
+    NSMutableDictionary *routesDict;
 }
+
+@synthesize routesArray;
+@synthesize stopsArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,9 +39,13 @@ typedef enum {
 {
     [super viewDidLoad];
     
+    // Disable backBarButtonItem title
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];;
+    
     // Init variables
     routesArray = [NSMutableArray new];
     stopsArray = [NSMutableArray new];
+    routesDict = [NSMutableDictionary new];
     
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Routes", @"Stops", @"Bookmarks", nil]];
     [segmentedControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
@@ -68,6 +74,8 @@ typedef enum {
             route.path = [routeDict objectForKey:@"path"];
             route.stops = [routeDict objectForKey:@"stops"];
             [routesArray addObject:route];
+            
+            [routesDict setObject:[routeDict objectForKey:@"name"] forKey:[[routeDict objectForKey:@"id"] stringValue]];
         }
     });
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -82,11 +90,20 @@ typedef enum {
             stop.coordinate = CLLocationCoordinate2DMake([[stopDict objectForKey:@"lat"] floatValue], [[stopDict objectForKey:@"lon"] floatValue]);
             stop.buddy = [[stopDict objectForKey:@"buddy"] integerValue];
             stop.announce = [[stopDict objectForKey:@"announce"] boolValue];
-            // We need to check because CityBus's DB has duplicate stops with different IDs
-            if( [duplicateArray indexOfObject:[stopDict objectForKey:@"name"]]==NSNotFound ) {
-                [stopsArray addObject:stop];
-                [duplicateArray addObject:[stopDict objectForKey:@"name"]];
+            
+            BOOL added = NO;
+            for( int i=0; i<stopsArray.count; i++ ) {
+                Stop *compareStop = (Stop *)[stopsArray objectAtIndex:i];
+                if( [compareStop.name isEqualToString:stop.name] ) {
+                    [stopsArray removeObjectAtIndex:i];
+                    [stopsArray addObject:stop];
+                    added = YES;
+                }
             }
+            if (!added) {
+                [stopsArray addObject:stop];
+            }
+            
             // Sort stops since it's not organized
             NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
             NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
@@ -172,7 +189,11 @@ typedef enum {
         
     }
     else if (currentOption == TVOptionStops) {
-        
+        StopDetailViewController *sdvc = [[StopDetailViewController alloc] init];
+        sdvc.stopId = ((Stop *)[stopsArray objectAtIndex:indexPath.row]).Id;
+        sdvc.stopName = ((Stop *)[stopsArray objectAtIndex:indexPath.row]).name;
+        sdvc.routesDict = routesDict;
+        [self.navigationController pushViewController:sdvc animated:YES];
     }
     else if (currentOption == TVOptionBookmarks) {
         
