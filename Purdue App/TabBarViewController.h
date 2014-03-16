@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MapViewController.h"
 #import "BusViewController.h"
+#import "DirectoryViewController.h"
+#import "MapViewController.h"
 #import "MailWebViewController.h"
 
 @interface TabBarViewController : UITabBarController

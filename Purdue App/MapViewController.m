@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Purdue Map";
+    self.navigationItem.title = @"Campus Map";
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     view.backgroundColor = [UIColor whiteColor];

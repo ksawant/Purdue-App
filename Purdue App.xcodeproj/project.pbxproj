@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E428CF418D48E5B003172DB /* MailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428CF318D48E5B003172DB /* MailWebViewController.m */; };
 		5E428CF718D48FB9003172DB /* RouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428CF618D48FB9003172DB /* RouteDetailViewController.m */; };
+		5E428D1A18D575D8003172DB /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D1918D575D8003172DB /* DirectoryViewController.m */; };
 		5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */; };
 		5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC07EA218D1598D00577F92 /* StopDetailViewController.m */; };
 		5EE9206718D0EB7B003EE2E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */; };
@@ -101,6 +102,8 @@
 		5E428CF318D48E5B003172DB /* MailWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailWebViewController.m; sourceTree = "<group>"; };
 		5E428CF518D48FB9003172DB /* RouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteDetailViewController.h; sourceTree = "<group>"; };
 		5E428CF618D48FB9003172DB /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailViewController.m; sourceTree = "<group>"; };
+		5E428D1818D575D8003172DB /* DirectoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
+		5E428D1918D575D8003172DB /* DirectoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
 		5EB99F7818CFB1F60073C4E8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		5EC07EA118D1598D00577F92 /* StopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopDetailViewController.h; sourceTree = "<group>"; };
@@ -294,6 +297,15 @@
 				5E428CF318D48E5B003172DB /* MailWebViewController.m */,
 			);
 			name = Mail;
+			sourceTree = "<group>";
+		};
+		5E428D1B18D575E0003172DB /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				5E428D1818D575D8003172DB /* DirectoryViewController.h */,
+				5E428D1918D575D8003172DB /* DirectoryViewController.m */,
+			);
+			name = Directory;
 			sourceTree = "<group>";
 		};
 		5EE9206B18D0EBF8003EE2E6 /* Map */ = {
@@ -601,6 +613,7 @@
 		5EE9217318D0F00A003EE2E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E428D1B18D575E0003172DB /* Directory */,
 				5E428CF118D48E34003172DB /* Mail */,
 				5EE9217118D0EFDE003EE2E6 /* TabBar */,
 				5EE9206B18D0EBF8003EE2E6 /* Map */,
@@ -817,6 +830,7 @@
 				5EE9216018D0ED21003EE2E6 /* MZDayPicker.m in Sources */,
 				5EE9209F18D0ECA3003EE2E6 /* FMDatabaseAdditions.m in Sources */,
 				5EE9217618D0FE5F003EE2E6 /* BusViewController.m in Sources */,
+				5E428D1A18D575D8003172DB /* DirectoryViewController.m in Sources */,
 				5EE9214618D0ECF4003EE2E6 /* NSData+GIF.m in Sources */,
 				5EE9214818D0ECF4003EE2E6 /* SDImageCache.m in Sources */,
 				5EE920C218D0ECD9003EE2E6 /* MRCircularProgressView.m in Sources */,
