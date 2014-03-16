@@ -10,11 +10,14 @@
 #import "MRProgress.h"
 #import "Route.h"
 #import "Stop.h"
+#import "Route.h"
 #import "StopDetailViewController.h"
+#import "RouteDetailViewController.h"
 
 @interface BusViewController : UITableViewController
 
 @property (nonatomic) NSMutableArray *routesArray;
 @property (nonatomic) NSMutableArray *stopsArray;
+@property (nonatomic) NSMutableArray *bookmarksArray;
 
 @end

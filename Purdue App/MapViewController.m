@@ -42,8 +42,7 @@
     mapSearchBar.delegate = self;
     [self.view addSubview:mapSearchBar];
     
-    // Initialize Google Maps with camera centered at Purdue University
-    
+    // Initialize MKMapView with camera centered at Purdue University
     mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, StatusBarHeight+NavBarHeight+mapSearchBar.frame.size.height, ScreenWidth, self.view.frame.size.height-mapSearchBar.frame.size.height)];
     MKMapCamera *camera = [MKMapCamera cameraLookingAtCenterCoordinate:CLLocationCoordinate2DMake(40.426526, -86.914559) fromEyeCoordinate:CLLocationCoordinate2DMake(40.426526, -86.914559) eyeAltitude:3000];
     [mapView setCamera:camera];

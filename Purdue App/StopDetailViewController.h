@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Stop.h"
 #import "CWStatusBarNotification.h"
 
 @interface StopDetailViewController : UITableViewController
 
-@property (nonatomic) NSInteger stopId;
-@property (nonatomic) NSString *stopName;
+@property (nonatomic) Stop *currentStop;
 @property (nonatomic) NSDictionary *routesDict;
 
 @end

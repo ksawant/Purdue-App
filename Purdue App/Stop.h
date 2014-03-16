@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Stop : NSObject
+@interface Stop : NSObject <NSCoding>
 
 @property (nonatomic) NSInteger Id;
 @property (nonatomic) NSString *name;

@@ -15,11 +15,11 @@
 @implementation StopDetailViewController {
     NSMutableArray *busArray;
     NSMutableArray *timeArray;
+    NSMutableArray *bookmarksArray;
     NSTimer *refreshTimer;
 }
 
-@synthesize stopId;
-@synthesize stopName;
+@synthesize currentStop;
 @synthesize routesDict;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -38,10 +38,47 @@
     busArray = [NSMutableArray new];
     timeArray = [NSMutableArray new];
     
-    self.navigationItem.title = [[stopName componentsSeparatedByString:@" - "] objectAtIndex:0];
+    // Set up NavigationBar
+    self.navigationItem.title = currentStop.name;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmark"] style:UIBarButtonItemStyleBordered target:self action:@selector(addBookmark:)];
     
+    // Determine if the stop has been bookmarked
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"Bus_Bookmarks"];
+    bookmarksArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    for( Stop *stop in bookmarksArray ) {
+        if (stop.Id == currentStop.Id) {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmarked"] style:UIBarButtonItemStyleBordered target:self action:@selector(deleteBookmark:)];
+            break;
+        }
+    }
+    
+    // Refresh Bus every 10 seconds
     [self refreshBusTimes:nil];
     refreshTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(refreshBusTimes:) userInfo:nil repeats:YES];
+}
+
+- (IBAction)addBookmark:(id)sender {
+    // Add Bookmark
+    [bookmarksArray addObject:currentStop];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:bookmarksArray];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"Bus_Bookmarks"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    // Change to deleteBookmark BarButtonItem
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmarked"] style:UIBarButtonItemStyleBordered target:self action:@selector(deleteBookmark:)];
+}
+
+- (IBAction)deleteBookmark:(id)sender {
+    // Remove Bookmark
+    for( Stop *stop in bookmarksArray ) {
+        if (stop.Id == currentStop.Id) {
+            [bookmarksArray removeObject:stop];
+            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:bookmarksArray];
+            [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"Bus_Bookmarks"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+    }
+    // Change to addBookmark BarButtonItem
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmark"] style:UIBarButtonItemStyleBordered target:self action:@selector(addBookmark:)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -56,10 +93,10 @@
     [timeArray removeAllObjects];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        NSData *detailData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://citybus.doublemap.com/map/v2/eta?stop=%li",(long)stopId]]];
+        NSData *detailData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://citybus.doublemap.com/map/v2/eta?stop=%li",(long)currentStop.Id]]];
         NSDictionary *detailDict = [NSJSONSerialization JSONObjectWithData:detailData options:NSJSONReadingAllowFragments error:nil];
         if( detailDict.count>0 ) {
-            detailDict = [[detailDict objectForKey:@"etas"] objectForKey:[NSString stringWithFormat:@"%li",(long)stopId]];
+            detailDict = [[detailDict objectForKey:@"etas"] objectForKey:[NSString stringWithFormat:@"%li",(long)currentStop.Id]];
             for( NSDictionary *dict in [detailDict objectForKey:@"etas"] ) {
                 [busArray addObject:[routesDict objectForKey:[[dict objectForKey:@"route"] stringValue]]];
                 [timeArray addObject:[[dict objectForKey:@"avg"] stringValue]];

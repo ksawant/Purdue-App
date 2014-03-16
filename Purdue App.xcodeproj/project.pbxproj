@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E428CF418D48E5B003172DB /* MailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428CF318D48E5B003172DB /* MailWebViewController.m */; };
+		5E428CF718D48FB9003172DB /* RouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428CF618D48FB9003172DB /* RouteDetailViewController.m */; };
 		5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */; };
 		5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC07EA218D1598D00577F92 /* StopDetailViewController.m */; };
 		5EE9206718D0EB7B003EE2E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */; };
@@ -95,6 +97,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E428CF218D48E5B003172DB /* MailWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailWebViewController.h; sourceTree = "<group>"; };
+		5E428CF318D48E5B003172DB /* MailWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailWebViewController.m; sourceTree = "<group>"; };
+		5E428CF518D48FB9003172DB /* RouteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteDetailViewController.h; sourceTree = "<group>"; };
+		5E428CF618D48FB9003172DB /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailViewController.m; sourceTree = "<group>"; };
 		5EB99F7818CFB1F60073C4E8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		5EC07EA118D1598D00577F92 /* StopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopDetailViewController.h; sourceTree = "<group>"; };
@@ -281,6 +287,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E428CF118D48E34003172DB /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				5E428CF218D48E5B003172DB /* MailWebViewController.h */,
+				5E428CF318D48E5B003172DB /* MailWebViewController.m */,
+			);
+			name = Mail;
+			sourceTree = "<group>";
+		};
 		5EE9206B18D0EBF8003EE2E6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +601,7 @@
 		5EE9217318D0F00A003EE2E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E428CF118D48E34003172DB /* Mail */,
 				5EE9217118D0EFDE003EE2E6 /* TabBar */,
 				5EE9206B18D0EBF8003EE2E6 /* Map */,
 				5EE9217718D0FE66003EE2E6 /* Bus */,
@@ -602,6 +618,8 @@
 			children = (
 				5EE9217418D0FE5F003EE2E6 /* BusViewController.h */,
 				5EE9217518D0FE5F003EE2E6 /* BusViewController.m */,
+				5E428CF518D48FB9003172DB /* RouteDetailViewController.h */,
+				5E428CF618D48FB9003172DB /* RouteDetailViewController.m */,
 				5EC07EA118D1598D00577F92 /* StopDetailViewController.h */,
 				5EC07EA218D1598D00577F92 /* StopDetailViewController.m */,
 			);
@@ -771,6 +789,7 @@
 				5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */,
 				5EE9214518D0ECF4003EE2E6 /* MKAnnotationView+WebCache.m in Sources */,
 				5EE9209E18D0ECA3003EE2E6 /* FMDatabase.m in Sources */,
+				5E428CF418D48E5B003172DB /* MailWebViewController.m in Sources */,
 				5EE9214F18D0ECF4003EE2E6 /* UIButton+WebCache.m in Sources */,
 				5EE9216B18D0ED5A003EE2E6 /* CWStatusBarNotification.m in Sources */,
 				5EE920C818D0ECD9003EE2E6 /* MRWeakProxy.m in Sources */,
@@ -821,6 +840,7 @@
 				5EE9214C18D0ECF4003EE2E6 /* SDWebImageDownloaderOperation.m in Sources */,
 				5EE9213B18D0ECF4003EE2E6 /* PSTCollectionViewFlowLayout.m in Sources */,
 				5EE9206A18D0EB9E003EE2E6 /* MapViewController.m in Sources */,
+				5E428CF718D48FB9003172DB /* RouteDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,6 +955,7 @@
 				GCC_PREFIX_HEADER = "Purdue App/Purdue App-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "Purdue App/Purdue App-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -949,6 +970,7 @@
 				GCC_PREFIX_HEADER = "Purdue App/Purdue App-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = "Purdue App/Purdue App-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

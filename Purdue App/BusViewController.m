@@ -25,6 +25,7 @@ typedef enum {
 
 @synthesize routesArray;
 @synthesize stopsArray;
+@synthesize bookmarksArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,12 +36,29 @@ typedef enum {
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"Bus_Bookmarks"];
+    bookmarksArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // Disable backBarButtonItem title
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];;
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    // Default opens to Routes segment
+    currentOption = TVOptionRoutes;
+    
+    // If user uses bookmarks for first time
+    if ( [[NSUserDefaults standardUserDefaults] objectForKey:@"Bus_Bookmarks"]==nil ) {
+        bookmarksArray = [NSMutableArray new];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:bookmarksArray];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"Bus_Bookmarks"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     
     // Init variables
     routesArray = [NSMutableArray new];
@@ -81,11 +99,10 @@ typedef enum {
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         NSData *stopData = [NSData dataWithContentsOfURL:[NSURL URLWithString:Bus_Stops_URL]];
         NSArray *stopArray = [NSJSONSerialization JSONObjectWithData:stopData options:NSJSONReadingAllowFragments error:nil];
-        NSMutableArray *duplicateArray = [NSMutableArray new];
         for( NSDictionary *stopDict in stopArray ) {
             Stop *stop = [[Stop alloc] init];
             stop.Id = [[stopDict objectForKey:@"id"] integerValue];
-            stop.name = [stopDict objectForKey:@"name"];
+            stop.name = [[[stopDict objectForKey:@"name"] componentsSeparatedByString:@"-"] objectAtIndex:0];
             stop.description = [stopDict objectForKey:@"description"];
             stop.coordinate = CLLocationCoordinate2DMake([[stopDict objectForKey:@"lat"] floatValue], [[stopDict objectForKey:@"lon"] floatValue]);
             stop.buddy = [[stopDict objectForKey:@"buddy"] integerValue];
@@ -113,7 +130,6 @@ typedef enum {
     
     // Wait until Routes and Stops are ready
     dispatch_group_notify(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        currentOption = TVOptionRoutes;
         dispatch_async(dispatch_get_main_queue(), ^{
             pov.titleLabelText = @"Done";
             pov.mode = MRProgressOverlayViewModeCheckmark;
@@ -154,7 +170,7 @@ typedef enum {
         return routesArray.count;
     else if (currentOption == TVOptionStops)
         return stopsArray.count;
-    return 0;
+    return bookmarksArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -176,7 +192,10 @@ typedef enum {
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.textLabel.numberOfLines = 2;
     } else {
-        cell.textLabel.text = nil;
+        Stop *stop = [bookmarksArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = stop.name;
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
+        cell.textLabel.numberOfLines = 2;
     }
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -186,17 +205,33 @@ typedef enum {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (currentOption == TVOptionRoutes) {
-        
+        RouteDetailViewController *rdvc = [[RouteDetailViewController alloc] init];
+        Route *route = [routesArray objectAtIndex:indexPath.row];
+        rdvc.routeName = route.name;
+        NSMutableArray *stopsOfRouteAry = [NSMutableArray new];
+        for (int i=0; i<stopsArray.count; i++) {
+            Stop *stop = [stopsArray objectAtIndex:i];
+            if ([route.stops indexOfObject:[NSNumber numberWithInteger:stop.Id]] != NSNotFound) {
+                [stopsOfRouteAry addObject:stop];
+            }
+        }
+        rdvc.stopsArray = stopsOfRouteAry;
+        rdvc.routesDict = routesDict;
+        [self.navigationController pushViewController:rdvc animated:YES];
     }
     else if (currentOption == TVOptionStops) {
         StopDetailViewController *sdvc = [[StopDetailViewController alloc] init];
-        sdvc.stopId = ((Stop *)[stopsArray objectAtIndex:indexPath.row]).Id;
-        sdvc.stopName = ((Stop *)[stopsArray objectAtIndex:indexPath.row]).name;
+        Stop *stop = [stopsArray objectAtIndex:indexPath.row];
+        sdvc.currentStop = stop;
         sdvc.routesDict = routesDict;
         [self.navigationController pushViewController:sdvc animated:YES];
     }
     else if (currentOption == TVOptionBookmarks) {
-        
+        StopDetailViewController *sdvc = [[StopDetailViewController alloc] init];
+        Stop *stop = [bookmarksArray objectAtIndex:indexPath.row];
+        sdvc.currentStop = stop;
+        sdvc.routesDict = routesDict;
+        [self.navigationController pushViewController:sdvc animated:YES];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

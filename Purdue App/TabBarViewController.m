@@ -39,13 +39,16 @@
         if (i == 0) {
             MapViewController *viewController = [[MapViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
-            [controllerAry addObject:navController];
         }
         
         else if (i == 3) {
             BusViewController *viewController = [[BusViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
-            [controllerAry addObject:navController];
+        }
+        
+        else if (i == 7) {
+            MailWebViewController *viewController = [[MailWebViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
         // Default - Haven't Implement
@@ -56,8 +59,10 @@
             UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
             view.backgroundColor = [UIColor whiteColor];
             viewController.view = view;
-            [controllerAry addObject:navController];
         }
+        
+        // Add Navigation Controller to TabBar
+        [controllerAry addObject:navController];
         
         // Set TabBarItems
         UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:[array objectAtIndex:i] image:[UIImage imageNamed:[array objectAtIndex:i]] tag:i];
