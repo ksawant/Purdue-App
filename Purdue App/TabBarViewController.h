@@ -11,6 +11,7 @@
 #import "DirectoryViewController.h"
 #import "MapViewController.h"
 #import "MailWebViewController.h"
+#import "PhotoViewController.h"
 
 @interface TabBarViewController : UITabBarController
 

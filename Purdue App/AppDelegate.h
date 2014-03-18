@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (NSArray*) getContentWithData:(NSString*)dataString usingPattern:(NSString *)patternStr withFIndex:(int)fIndex andBIndex:(int) bIndex;
+
 @end

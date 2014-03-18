@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"myMail";
+    
     UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mymail.purdue.edu/"]]];
     webView.delegate = self;

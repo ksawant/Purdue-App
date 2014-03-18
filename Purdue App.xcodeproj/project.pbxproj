@@ -10,6 +10,8 @@
 		5E428CF418D48E5B003172DB /* MailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428CF318D48E5B003172DB /* MailWebViewController.m */; };
 		5E428CF718D48FB9003172DB /* RouteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428CF618D48FB9003172DB /* RouteDetailViewController.m */; };
 		5E428D1A18D575D8003172DB /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D1918D575D8003172DB /* DirectoryViewController.m */; };
+		5E428D1E18D62BF7003172DB /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D1D18D62BF7003172DB /* PhotoViewController.m */; };
+		5E428D2218D63090003172DB /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D2118D63090003172DB /* Album.m */; };
 		5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */; };
 		5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC07EA218D1598D00577F92 /* StopDetailViewController.m */; };
 		5EE9206718D0EB7B003EE2E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */; };
@@ -104,6 +106,10 @@
 		5E428CF618D48FB9003172DB /* RouteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailViewController.m; sourceTree = "<group>"; };
 		5E428D1818D575D8003172DB /* DirectoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryViewController.h; sourceTree = "<group>"; };
 		5E428D1918D575D8003172DB /* DirectoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryViewController.m; sourceTree = "<group>"; };
+		5E428D1C18D62BF7003172DB /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		5E428D1D18D62BF7003172DB /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		5E428D2018D63090003172DB /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		5E428D2118D63090003172DB /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		5EB99F7818CFB1F60073C4E8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		5EC07EA118D1598D00577F92 /* StopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopDetailViewController.h; sourceTree = "<group>"; };
@@ -306,6 +312,15 @@
 				5E428D1918D575D8003172DB /* DirectoryViewController.m */,
 			);
 			name = Directory;
+			sourceTree = "<group>";
+		};
+		5E428D1F18D62BFD003172DB /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				5E428D1C18D62BF7003172DB /* PhotoViewController.h */,
+				5E428D1D18D62BF7003172DB /* PhotoViewController.m */,
+			);
+			name = Photo;
 			sourceTree = "<group>";
 		};
 		5EE9206B18D0EBF8003EE2E6 /* Map */ = {
@@ -613,6 +628,7 @@
 		5EE9217318D0F00A003EE2E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E428D1F18D62BFD003172DB /* Photo */,
 				5E428D1B18D575E0003172DB /* Directory */,
 				5E428CF118D48E34003172DB /* Mail */,
 				5EE9217118D0EFDE003EE2E6 /* TabBar */,
@@ -646,6 +662,8 @@
 				5EE9217C18D104AC003EE2E6 /* Stop.m */,
 				5EE9217818D102BA003EE2E6 /* Route.h */,
 				5EE9217918D102BA003EE2E6 /* Route.m */,
+				5E428D2018D63090003172DB /* Album.h */,
+				5E428D2118D63090003172DB /* Album.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -845,6 +863,7 @@
 				5EE9213918D0ECF4003EE2E6 /* PSTCollectionViewController.m in Sources */,
 				5EE9215118D0ECF4003EE2E6 /* UIImage+MultiFormat.m in Sources */,
 				5EE920BF18D0ECD9003EE2E6 /* MRBlurView.m in Sources */,
+				5E428D2218D63090003172DB /* Album.m in Sources */,
 				5EE920A018D0ECA3003EE2E6 /* FMDatabasePool.m in Sources */,
 				5EE9212F18D0ECF4003EE2E6 /* MWPhotoBrowser.m in Sources */,
 				5EE9216718D0ED44003EE2E6 /* SuProgress.m in Sources */,
@@ -855,6 +874,7 @@
 				5EE9213B18D0ECF4003EE2E6 /* PSTCollectionViewFlowLayout.m in Sources */,
 				5EE9206A18D0EB9E003EE2E6 /* MapViewController.m in Sources */,
 				5E428CF718D48FB9003172DB /* RouteDetailViewController.m in Sources */,
+				5E428D1E18D62BF7003172DB /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

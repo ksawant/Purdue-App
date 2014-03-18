@@ -46,4 +46,20 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (NSArray*) getContentWithData:(NSString*)dataString usingPattern:(NSString *)patternStr withFIndex:(int)fIndex andBIndex:(int) bIndex {
+    
+    // Setup Regular Expression matching
+    NSMutableArray *resultsAry = [NSMutableArray new];
+    NSRegularExpression* regex = [[NSRegularExpression alloc]initWithPattern:patternStr options:NSRegularExpressionCaseInsensitive error:nil];
+    NSArray *matchAry=[regex matchesInString:dataString options:0 range:NSMakeRange(0, dataString.length)];
+    
+    // Regular Expression objects are returned in NSTextCheckingResult types
+    for( NSTextCheckingResult *match in matchAry) {
+        NSString *result=[dataString substringWithRange:[match range]];
+        [resultsAry addObject:[result substringWithRange:NSMakeRange(fIndex,result.length-bIndex-fIndex) ]];
+    }
+    
+    return resultsAry;
+}
+
 @end

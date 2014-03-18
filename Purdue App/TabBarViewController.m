@@ -69,6 +69,11 @@
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
+        else if( [[tabBarArray objectAtIndex:i] isEqualToString:@"Photos"] ) {
+            PhotoViewController *viewController = [[PhotoViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
+        
         // Default - Haven't Implement
         else {
             UIViewController *viewController = [[UIViewController alloc] init];

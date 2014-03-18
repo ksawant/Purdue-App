@@ -115,7 +115,7 @@
         UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Your search has returned too many entries" message:@"Please try narrowing your search" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [errorAlertView show];
     } else {
-        NSArray *moreArray = [self getContentWithData:string usingPattern:@"alias=.*?&" withFIndex:6 andBIndex:1];
+        NSArray *moreArray = [ApplicationDelegate getContentWithData:string usingPattern:@"alias=.*?&" withFIndex:6 andBIndex:1];
         for (NSString *purdueUser in moreArray ) {
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.itap.purdue.edu/directory/detail.cfm?alias=%@", purdueUser]];
             NSString *string = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
@@ -127,11 +127,11 @@
             string = [string stringByReplacingOccurrencesOfString:@"\f" withString:@""];
             string = [string stringByReplacingOccurrencesOfString:@"\x0B" withString:@""];
             
-            [sectionTitleArray addObject:[[self getContentWithData:string usingPattern:@"\"Details for .*?:\"" withFIndex:13 andBIndex:2] objectAtIndex:0]];
-            string = [[self getContentWithData:string usingPattern:@"<tbody>.*?</tbody>" withFIndex:0 andBIndex:0] objectAtIndex:0];
+            [sectionTitleArray addObject:[[ApplicationDelegate getContentWithData:string usingPattern:@"\"Details for .*?:\"" withFIndex:13 andBIndex:2] objectAtIndex:0]];
+            string = [[ApplicationDelegate getContentWithData:string usingPattern:@"<tbody>.*?</tbody>" withFIndex:0 andBIndex:0] objectAtIndex:0];
             NSMutableArray *titleArray = [NSMutableArray new];
             NSMutableArray *detailArray = [NSMutableArray new];
-            for (NSString *title in [self getContentWithData:string usingPattern:@"row\">.*?<" withFIndex:5 andBIndex:2]) {
+            for (NSString *title in [ApplicationDelegate getContentWithData:string usingPattern:@"row\">.*?<" withFIndex:5 andBIndex:2]) {
                 if ([title isEqualToString:@"Career Acct. Login"]) {
                     [titleArray addObject:@"Account"];
                 } else if ([title isEqualToString:@"Qualified Name"]) {
@@ -140,10 +140,10 @@
                     [titleArray addObject:title];
                 }
             }
-            for (NSString *detail in [self getContentWithData:string usingPattern:@"td>.*?</td" withFIndex:3 andBIndex:4]) {
+            for (NSString *detail in [ApplicationDelegate getContentWithData:string usingPattern:@"td>.*?</td" withFIndex:3 andBIndex:4]) {
                 NSInteger emailIndex = [detail rangeOfString:@"mailto"].location;
                 if (emailIndex != NSNotFound) {
-                    [detailArray addObject:[[self getContentWithData:detail usingPattern:@"mailto:.*?.edu" withFIndex:7 andBIndex:0] objectAtIndex:0]];
+                    [detailArray addObject:[[ApplicationDelegate getContentWithData:detail usingPattern:@"mailto:.*?.edu" withFIndex:7 andBIndex:0] objectAtIndex:0]];
                 } else {
                     [detailArray addObject:detail];
                 }
@@ -153,22 +153,6 @@
         }
         [self.tableView reloadData];
     }
-}
-
-- (NSArray*) getContentWithData:(NSString*)dataString usingPattern:(NSString *)patternStr withFIndex:(int)fIndex andBIndex:(int) bIndex {
-    
-    // Setup Regular Expression matching
-    NSMutableArray *resultsAry = [NSMutableArray new];
-    NSRegularExpression* regex = [[NSRegularExpression alloc]initWithPattern:patternStr options:NSRegularExpressionCaseInsensitive error:nil];
-    NSArray *matchAry=[regex matchesInString:dataString options:0 range:NSMakeRange(0, dataString.length)];
-    
-    // Regular Expression objects are returned in NSTextCheckingResult types
-    for( NSTextCheckingResult *match in matchAry) {
-        NSString *result=[dataString substringWithRange:[match range]];
-        [resultsAry addObject:[result substringWithRange:NSMakeRange(fIndex,result.length-bIndex-fIndex) ]];
-    }
-    
-    return resultsAry;
 }
 
 @end
