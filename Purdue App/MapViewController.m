@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Campus Map";
+    self.navigationItem.title = NSLocalizedString(@"CAMPUSMAP", nil);
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     view.backgroundColor = [UIColor whiteColor];
@@ -37,7 +37,7 @@
     
     // Add Search Bar on top of the MapView
     UISearchBar *mapSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, StatusBarHeight+NavBarHeight, ScreenWidth, 44)];
-    mapSearchBar.placeholder = @"Search";
+    mapSearchBar.placeholder = NSLocalizedString(@"SEARCH", nil);
     mapSearchBar.showsCancelButton = YES;
     mapSearchBar.delegate = self;
     [self.view addSubview:mapSearchBar];

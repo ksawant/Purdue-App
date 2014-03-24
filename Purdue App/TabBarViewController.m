@@ -29,12 +29,41 @@
 {
     [super viewDidLoad];
     
+    NSDictionary *tabTitleDict = [NSDictionary dictionaryWithObjects:
+                                  [NSArray arrayWithObjects:
+                                   NSLocalizedString(@"ABOUT", nil), NSLocalizedString(@"BANDWIDTH", nil),
+                                   NSLocalizedString(@"BLACKBOARD", nil), NSLocalizedString(@"BUS", nil),
+                                   NSLocalizedString(@"COREC", nil), NSLocalizedString(@"DIRECTORY", nil),
+                                   NSLocalizedString(@"GAMES", nil), NSLocalizedString(@"LABS", nil),
+                                   NSLocalizedString(@"LIBRARY", nil), NSLocalizedString(@"MAP", nil),
+                                   NSLocalizedString(@"MENU", nil), NSLocalizedString(@"MYMAIL", nil),
+                                   NSLocalizedString(@"NEWS", nil), NSLocalizedString(@"PHOTOS", nil),
+                                   NSLocalizedString(@"SCHEDULE", nil), NSLocalizedString(@"SETTINGS", nil),
+                                   NSLocalizedString(@"STORE", nil), NSLocalizedString(@"VIDEOS", nil),
+                                   NSLocalizedString(@"WEATHER", nil),
+                                    nil]
+                                    forKeys:
+                                   [NSArray arrayWithObjects:
+                                     @"0", @"1", @"2",
+                                     @"3", @"4", @"5",
+                                     @"6", @"7", @"8",
+                                     @"9", @"10", @"11",
+                                     @"12", @"13", @"14",
+                                     @"15", @"16", @"17",
+                                     @"18",
+                                    nil]
+                                  ];
+    
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"TabBar_Order"] == nil) {
         NSArray *array = [NSArray arrayWithObjects:
-                          @"Map", @"Schedule", @"Menu", @"Bus", @"News",
-                          @"Photos", @"Videos", @"MyMail", @"Blackboard", @"Labs",
-                          @"Directory", @"Weather", @"Store", @"Library", @"Co-Rec",
-                          @"About", @"Bandwidth", @"Games", @"Settings", nil];
+                          @"0", @"1", @"2",
+                          @"3", @"4", @"5",
+                          @"6", @"7", @"8",
+                          @"9", @"10", @"11",
+                          @"12", @"13", @"14",
+                          @"15", @"16", @"17",
+                          @"18",
+                          nil];
         [[NSUserDefaults standardUserDefaults] setObject:array forKey:@"TabBar_Order"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
@@ -44,33 +73,48 @@
     NSMutableArray *controllerAry = [NSMutableArray new];
     for( int i=0; i<tabBarArray.count; i++ ) {
         UINavigationController *navController;
+        NSString *tabTitle = [tabTitleDict objectForKey:[tabBarArray objectAtIndex:i]];
+        
+#warning Eric's Part - Please modify AboutViewController
+        // About
+        if ( [tabTitle isEqualToString:NSLocalizedString(@"ABOUT", nil)] ) {
+            AboutViewController *viewController = [[AboutViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
         
         // Bus
-        if ( [[tabBarArray objectAtIndex:i] isEqualToString:@"Bus"] ) {
+        if ( [tabTitle isEqualToString:NSLocalizedString(@"BUS", nil)] ) {
             BusViewController *viewController = [[BusViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
         // Directory
-        else if ( [[tabBarArray objectAtIndex:i] isEqualToString:@"Directory"] ) {
+        else if ( [tabTitle isEqualToString:NSLocalizedString(@"DIRECTORY", nil)] ) {
             DirectoryViewController *viewController = [[DirectoryViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
         // Map
-        else if ( [[tabBarArray objectAtIndex:i] isEqualToString:@"Map"] ) {
+        else if ( [tabTitle isEqualToString:NSLocalizedString(@"MAP", nil)] ) {
             MapViewController *viewController = [[MapViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
         // MyMail
-        else if ( [[tabBarArray objectAtIndex:i] isEqualToString:@"MyMail"] ) {
+        else if ( [tabTitle isEqualToString:NSLocalizedString(@"MYMAIL", nil)] ) {
             MailWebViewController *viewController = [[MailWebViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
-        else if( [[tabBarArray objectAtIndex:i] isEqualToString:@"Photos"] ) {
+        // Photos
+        else if( [tabTitle isEqualToString:NSLocalizedString(@"PHOTOS", nil)] ) {
             PhotoViewController *viewController = [[PhotoViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
+        
+        // Settings
+        else if( [tabTitle isEqualToString:NSLocalizedString(@"SETTINGS", nil)] ) {
+            SettingsViewController *viewController = [[SettingsViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
@@ -78,7 +122,7 @@
         else {
             UIViewController *viewController = [[UIViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
-            viewController.navigationItem.title = [tabBarArray objectAtIndex:i];
+            viewController.navigationItem.title = tabTitle;
             UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
             view.backgroundColor = [UIColor whiteColor];
             viewController.view = view;
@@ -88,7 +132,7 @@
         [controllerAry addObject:navController];
         
         // Set TabBarItems
-        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:[tabBarArray objectAtIndex:i] image:[UIImage imageNamed:[tabBarArray objectAtIndex:i]] tag:i];
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:[tabTitleDict objectForKey:[tabBarArray objectAtIndex:i]] image:[UIImage imageNamed:[tabBarArray objectAtIndex:i]] tag:i];
         [navController setTabBarItem:item];
     }
     [self setViewControllers:controllerAry];
@@ -106,10 +150,9 @@
             UITabBarItem *tabBarItem = [items objectAtIndex:i];
             // Save if the user customized tabBar
             if (![tabBarItem.title isEqualToString:[tabBarArray objectAtIndex:i]]) {
-                NSInteger index = [tabBarArray indexOfObject:tabBarItem.title];
-                NSString *tempTitle = [tabBarArray objectAtIndex:i];
-                [tabBarArray replaceObjectAtIndex:i withObject:tabBarItem.title];
-                [tabBarArray replaceObjectAtIndex:index withObject:tempTitle];
+                int index = (int)[tabBarArray indexOfObject:tabBarItem.title];
+                [tabBarArray replaceObjectAtIndex:i withObject:[NSString stringWithFormat:@"%i",index]];
+                [tabBarArray replaceObjectAtIndex:index withObject:[NSString stringWithFormat:@"%i",i]];
                 [[NSUserDefaults standardUserDefaults] setObject:tabBarArray forKey:@"TabBar_Order"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
             }

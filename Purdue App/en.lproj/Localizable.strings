@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  Purdue App
+
+  Created by George Lo on 3/22/14.
+  Copyright (c) 2014 Purdue iOS Development Club. All rights reserved.
+*/
+
+"ABOUT" = "About";
+"BANDWIDTH" = "Bandwidth";
+"BLACKBOARD" = "Blackboard";
+"BOOKMARKS" = "Bookmarks";
+"BUS" = "Bus";
+"CAMPUSMAP" = "Campus Map";
+"CANCEL" = "Cancel";
+"COREC" = "Co-Rec";
+"DIRECTORY" = "Directory";
+"DONE" = "Done";
+"GAMES" = "Games";
+"GENERAL" = "General";
+"LABS" = "Labs";
+"LANGUAGE" = "Language";
+"LIBRARY" = "Library";
+"LOADING" = "Loading";
+"MAP" = "Map";
+"MENU" = "Menu";
+"MIN" = "min";
+"MYMAIL" = "MyMail";
+"NEWS" = "News";
+"NO" = "No";
+"PHOTOS" = "Photos";
+"RECENTPHOTOS" = "Recent Photos";
+"ROUTES" = "Routes";
+"ROUTETIME" = "Route                                                      Time";
+"SCHEDULE" = "Schedule";
+"SEARCH" = "Search";
+"SETTINGS" = "Settings";
+"STOPS" = "Stops";
+"STORE" = "Store";
+"VIDEOS" = "Videos";
+"WEATHER" = "Weather";
+"YES" = "Yes";
+
+"LOCAL_TITLE" = "Localization takes effect after app relaunch";
+"LOCAL_MESSAGE" = "Do you wish to quit the app and tap on the app icon now (re-launch)?";

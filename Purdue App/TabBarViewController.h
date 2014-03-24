@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AboutViewController.h"
 #import "BusViewController.h"
 #import "DirectoryViewController.h"
 #import "MapViewController.h"
 #import "MailWebViewController.h"
 #import "PhotoViewController.h"
+#import "SettingsViewController.h"
 
 @interface TabBarViewController : UITabBarController
 

@@ -30,21 +30,21 @@ Purdue-App
 - Korean
 
 ### Content
-- Maps
-- Schedule (Class + Exams)
-- Mobile Menu
-- Bus
-- News
-- Photos
-- Videos
-- MyMail
-- Blackboard
-- Labs
-- Purdue Directory
-- Weather (Current, Hours, Days)
-- Purdue Store
-- Library Hours
-- Co-Rec
-- About (Profile Picture + Name)
-- My Bandwidth
-- Game scores/schedules
+- Maps — `Half-complete`
+- Schedule (Class + Exams) — `Incomplete`
+- Mobile Menu — `Incomplete`
+- Bus — `Complete`
+- News — `Incomplete`
+- Photos — `Complete`
+- Videos — `Incomplete`
+- MyMail — `Complete`
+- Blackboard — `Incomplete`
+- Labs — `Incomplete`
+- Purdue Directory — `Complete`
+- Weather (Current, Hours, Days) — `Incomplete`
+- Purdue Store — `Incomplete`
+- Library Hours — `Incomplete`
+- Co-Rec — `Incomplete`
+- About (Profile Picture + Name) — `Incomplete`
+- My Bandwidth — `Incomplete`
+- Game scores/schedules — `Incomplete`

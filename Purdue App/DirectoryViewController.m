@@ -41,7 +41,7 @@
     
     // Add a Search Bar
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
-    searchBar.placeholder = @"Search for anyone";
+    searchBar.placeholder = NSLocalizedString(@"SEARCH", nil);
     searchBar.showsCancelButton = YES;
     searchBar.delegate = self;
     self.tableView.tableHeaderView = searchBar;

@@ -30,11 +30,11 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Recent Photos";
+    self.navigationItem.title = NSLocalizedString(@"RECENTPHOTOS", nil);
     albumArray = [NSMutableArray new];
     
     MRProgressOverlayView *pov = [MRProgressOverlayView showOverlayAddedTo:self.parentViewController.view animated:YES];
-    pov.titleLabelText = @"Loading";
+    pov.titleLabelText = NSLocalizedString(@"LOADING", nil);
     pov.mode = MRProgressOverlayViewModeIndeterminate;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -59,7 +59,7 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
-            pov.titleLabelText = @"Done";
+            pov.titleLabelText = NSLocalizedString(@"DONE", nil);
             pov.mode = MRProgressOverlayViewModeCheckmark;
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [pov dismiss:YES];

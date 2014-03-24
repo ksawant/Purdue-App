@@ -65,14 +65,14 @@ typedef enum {
     stopsArray = [NSMutableArray new];
     routesDict = [NSMutableDictionary new];
     
-    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Routes", @"Stops", @"Bookmarks", nil]];
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"ROUTES", nil), NSLocalizedString(@"STOPS", nil), NSLocalizedString(@"BOOKMARKS", nil), nil]];
     [segmentedControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
     segmentedControl.selectedSegmentIndex = 0;
     self.navigationItem.titleView = segmentedControl;
     
     // Loading Indicator - for good UX
     MRProgressOverlayView *pov = [MRProgressOverlayView showOverlayAddedTo:self.parentViewController.view animated:YES];
-    pov.titleLabelText = @"Loading";
+    pov.titleLabelText = NSLocalizedString(@"LOADING", nil);
     pov.mode = MRProgressOverlayViewModeIndeterminate;
     
     // Use two different dispatch priority queues to retrieve data
@@ -131,7 +131,7 @@ typedef enum {
     // Wait until Routes and Stops are ready
     dispatch_group_notify(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            pov.titleLabelText = @"Done";
+            pov.titleLabelText = NSLocalizedString(@"DONE", nil);
             pov.mode = MRProgressOverlayViewModeCheckmark;
             // 1.0 seconds for a smoother transition
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

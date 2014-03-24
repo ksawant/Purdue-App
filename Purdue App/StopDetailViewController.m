@@ -146,7 +146,7 @@
     }
     
     cell.textLabel.text = [busArray objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ min", [timeArray objectAtIndex:indexPath.row]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", [timeArray objectAtIndex:indexPath.row], NSLocalizedString(@"MIN", nil)];
     NSInteger time = [[timeArray objectAtIndex:indexPath.row] integerValue];
     if (time <= 1) {
         cell.detailTextLabel.textColor = [UIColor redColor];
@@ -160,9 +160,11 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Route                                                      Time";
+    return NSLocalizedString(@"ROUTETIME", nil);
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end

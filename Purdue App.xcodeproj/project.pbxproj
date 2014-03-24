@@ -12,6 +12,13 @@
 		5E428D1A18D575D8003172DB /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D1918D575D8003172DB /* DirectoryViewController.m */; };
 		5E428D1E18D62BF7003172DB /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D1D18D62BF7003172DB /* PhotoViewController.m */; };
 		5E428D2218D63090003172DB /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D2118D63090003172DB /* Album.m */; };
+		5E73BD0618DE75500093EE20 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0518DE75500093EE20 /* AboutViewController.m */; };
+		5E73BD0C18DE845B0093EE20 /* I18NUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0B18DE845B0093EE20 /* I18NUtil.m */; };
+		5E73BD1018DE84D40093EE20 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0F18DE84D40093EE20 /* SettingsViewController.m */; };
+		5E73BD1418DE9E830093EE20 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1218DE9E830093EE20 /* Main_iPad.storyboard */; };
+		5E73BD1518DE9E830093EE20 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1318DE9E830093EE20 /* Main_iPhone.storyboard */; };
+		5E73BD1618DEB7D40093EE20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1818DEB7D40093EE20 /* Localizable.strings */; };
+		5E73BD1A18DEB8120093EE20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1918DEB8120093EE20 /* InfoPlist.strings */; };
 		5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */; };
 		5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC07EA218D1598D00577F92 /* StopDetailViewController.m */; };
 		5EE9206718D0EB7B003EE2E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */; };
@@ -87,11 +94,8 @@
 		5EF3C72E18BC0CB900015A27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3C72D18BC0CB900015A27 /* Foundation.framework */; };
 		5EF3C73018BC0CB900015A27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3C72F18BC0CB900015A27 /* CoreGraphics.framework */; };
 		5EF3C73218BC0CB900015A27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3C73118BC0CB900015A27 /* UIKit.framework */; };
-		5EF3C73818BC0CB900015A27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C73618BC0CB900015A27 /* InfoPlist.strings */; };
 		5EF3C73A18BC0CB900015A27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C73918BC0CB900015A27 /* main.m */; };
 		5EF3C73E18BC0CB900015A27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C73D18BC0CB900015A27 /* AppDelegate.m */; };
-		5EF3C74118BC0CB900015A27 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C73F18BC0CB900015A27 /* Main_iPhone.storyboard */; };
-		5EF3C74418BC0CB900015A27 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C74218BC0CB900015A27 /* Main_iPad.storyboard */; };
 		5EF3C74718BC0CB900015A27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C74618BC0CB900015A27 /* ViewController.m */; };
 		5EF3C74918BC0CB900015A27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C74818BC0CB900015A27 /* Images.xcassets */; };
 		5EF3C76618BC6A7700015A27 /* SampleWallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */; };
@@ -110,6 +114,17 @@
 		5E428D1D18D62BF7003172DB /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		5E428D2018D63090003172DB /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		5E428D2118D63090003172DB /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		5E73BD0418DE75500093EE20 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		5E73BD0518DE75500093EE20 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		5E73BD0A18DE845B0093EE20 /* I18NUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I18NUtil.h; sourceTree = "<group>"; };
+		5E73BD0B18DE845B0093EE20 /* I18NUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I18NUtil.m; sourceTree = "<group>"; };
+		5E73BD0E18DE84D40093EE20 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		5E73BD0F18DE84D40093EE20 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5E73BD1218DE9E830093EE20 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		5E73BD1318DE9E830093EE20 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5E73BD1718DEB7D40093EE20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5E73BD1918DEB8120093EE20 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		5E73BD1B18DEB81D0093EE20 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5EB99F7818CFB1F60073C4E8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		5EC07EA118D1598D00577F92 /* StopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopDetailViewController.h; sourceTree = "<group>"; };
@@ -262,13 +277,10 @@
 		5EF3C72F18BC0CB900015A27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5EF3C73118BC0CB900015A27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5EF3C73518BC0CB900015A27 /* Purdue App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Purdue App-Info.plist"; sourceTree = "<group>"; };
-		5EF3C73718BC0CB900015A27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5EF3C73918BC0CB900015A27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5EF3C73B18BC0CB900015A27 /* Purdue App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Purdue App-Prefix.pch"; sourceTree = "<group>"; };
 		5EF3C73C18BC0CB900015A27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EF3C73D18BC0CB900015A27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5EF3C74018BC0CB900015A27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		5EF3C74318BC0CB900015A27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		5EF3C74518BC0CB900015A27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5EF3C74618BC0CB900015A27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5EF3C74818BC0CB900015A27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -321,6 +333,33 @@
 				5E428D1D18D62BF7003172DB /* PhotoViewController.m */,
 			);
 			name = Photo;
+			sourceTree = "<group>";
+		};
+		5E73BD0718DE75540093EE20 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				5E73BD0418DE75500093EE20 /* AboutViewController.h */,
+				5E73BD0518DE75500093EE20 /* AboutViewController.m */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		5E73BD0D18DE84610093EE20 /* I18NUtil */ = {
+			isa = PBXGroup;
+			children = (
+				5E73BD0A18DE845B0093EE20 /* I18NUtil.h */,
+				5E73BD0B18DE845B0093EE20 /* I18NUtil.m */,
+			);
+			name = I18NUtil;
+			sourceTree = "<group>";
+		};
+		5E73BD1118DE84DB0093EE20 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5E73BD0E18DE84D40093EE20 /* SettingsViewController.h */,
+				5E73BD0F18DE84D40093EE20 /* SettingsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		5EE9206B18D0EBF8003EE2E6 /* Map */ = {
@@ -596,6 +635,7 @@
 		5EE9217018D0EFD1003EE2E6 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5E73BD0D18DE84610093EE20 /* I18NUtil */,
 				5EE9216818D0ED5A003EE2E6 /* CWStatusBarNotification */,
 				5EE9216218D0ED44003EE2E6 /* SuProgress */,
 				5EE9215818D0ED21003EE2E6 /* MZDayPicker */,
@@ -628,6 +668,8 @@
 		5EE9217318D0F00A003EE2E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E73BD1118DE84DB0093EE20 /* Settings */,
+				5E73BD0718DE75540093EE20 /* About */,
 				5E428D1F18D62BFD003172DB /* Photo */,
 				5E428D1B18D575E0003172DB /* Directory */,
 				5E428CF118D48E34003172DB /* Mail */,
@@ -705,8 +747,6 @@
 				5EE9217018D0EFD1003EE2E6 /* Libraries */,
 				5EF3C73C18BC0CB900015A27 /* AppDelegate.h */,
 				5EF3C73D18BC0CB900015A27 /* AppDelegate.m */,
-				5EF3C73F18BC0CB900015A27 /* Main_iPhone.storyboard */,
-				5EF3C74218BC0CB900015A27 /* Main_iPad.storyboard */,
 				5EE9217E18D11887003EE2E6 /* Objects */,
 				5EE9217318D0F00A003EE2E6 /* ViewControllers */,
 				5EE9217218D0EFF2003EE2E6 /* UIImage extensions */,
@@ -718,10 +758,13 @@
 		5EF3C73418BC0CB900015A27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E73BD1218DE9E830093EE20 /* Main_iPad.storyboard */,
+				5E73BD1318DE9E830093EE20 /* Main_iPhone.storyboard */,
+				5E73BD1918DEB8120093EE20 /* InfoPlist.strings */,
+				5E73BD1818DEB7D40093EE20 /* Localizable.strings */,
 				5EF3C74818BC0CB900015A27 /* Images.xcassets */,
 				5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */,
 				5EF3C73518BC0CB900015A27 /* Purdue App-Info.plist */,
-				5EF3C73618BC0CB900015A27 /* InfoPlist.strings */,
 				5EF3C73918BC0CB900015A27 /* main.m */,
 				5EF3C73B18BC0CB900015A27 /* Purdue App-Prefix.pch */,
 			);
@@ -764,6 +807,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 5EF3C72118BC0CB900015A27;
 			productRefGroup = 5EF3C72B18BC0CB900015A27 /* Products */;
@@ -782,14 +826,15 @@
 			files = (
 				5EE9213518D0ECF4003EE2E6 /* README.mdown in Resources */,
 				5EE9216618D0ED44003EE2E6 /* .gitignore in Resources */,
-				5EF3C74418BC0CB900015A27 /* Main_iPad.storyboard in Resources */,
+				5E73BD1618DEB7D40093EE20 /* Localizable.strings in Resources */,
 				5EF3C74918BC0CB900015A27 /* Images.xcassets in Resources */,
 				5EF3C76618BC6A7700015A27 /* SampleWallpaper.png in Resources */,
-				5EF3C74118BC0CB900015A27 /* Main_iPhone.storyboard in Resources */,
+				5E73BD1418DE9E830093EE20 /* Main_iPad.storyboard in Resources */,
 				5EE9214318D0ECF4003EE2E6 /* LICENSE in Resources */,
 				5EE9214418D0ECF4003EE2E6 /* README.md in Resources */,
-				5EF3C73818BC0CB900015A27 /* InfoPlist.strings in Resources */,
 				5EE9215418D0ECF4003EE2E6 /* MWPhotoBrowser.bundle in Resources */,
+				5E73BD1A18DEB8120093EE20 /* InfoPlist.strings in Resources */,
+				5E73BD1518DE9E830093EE20 /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,6 +896,7 @@
 				5E428D1A18D575D8003172DB /* DirectoryViewController.m in Sources */,
 				5EE9214618D0ECF4003EE2E6 /* NSData+GIF.m in Sources */,
 				5EE9214818D0ECF4003EE2E6 /* SDImageCache.m in Sources */,
+				5E73BD1018DE84D40093EE20 /* SettingsViewController.m in Sources */,
 				5EE920C218D0ECD9003EE2E6 /* MRCircularProgressView.m in Sources */,
 				5EE9215018D0ECF4003EE2E6 /* UIImage+GIF.m in Sources */,
 				5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */,
@@ -865,11 +911,13 @@
 				5EE920BF18D0ECD9003EE2E6 /* MRBlurView.m in Sources */,
 				5E428D2218D63090003172DB /* Album.m in Sources */,
 				5EE920A018D0ECA3003EE2E6 /* FMDatabasePool.m in Sources */,
+				5E73BD0C18DE845B0093EE20 /* I18NUtil.m in Sources */,
 				5EE9212F18D0ECF4003EE2E6 /* MWPhotoBrowser.m in Sources */,
 				5EE9216718D0ED44003EE2E6 /* SuProgress.m in Sources */,
 				5EE9214D18D0ECF4003EE2E6 /* SDWebImageManager.m in Sources */,
 				5EE9214B18D0ECF4003EE2E6 /* SDWebImageDownloader.m in Sources */,
 				5EE9213F18D0ECF4003EE2E6 /* PSTGridLayoutInfo.m in Sources */,
+				5E73BD0618DE75500093EE20 /* AboutViewController.m in Sources */,
 				5EE9214C18D0ECF4003EE2E6 /* SDWebImageDownloaderOperation.m in Sources */,
 				5EE9213B18D0ECF4003EE2E6 /* PSTCollectionViewFlowLayout.m in Sources */,
 				5EE9206A18D0EB9E003EE2E6 /* MapViewController.m in Sources */,
@@ -881,28 +929,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5EF3C73618BC0CB900015A27 /* InfoPlist.strings */ = {
+		5E73BD1818DEB7D40093EE20 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5EF3C73718BC0CB900015A27 /* en */,
+				5E73BD1718DEB7D40093EE20 /* en */,
+				5E73BD1B18DEB81D0093EE20 /* zh-Hant */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5EF3C73F18BC0CB900015A27 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5EF3C74018BC0CB900015A27 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		5EF3C74218BC0CB900015A27 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5EF3C74318BC0CB900015A27 /* Base */,
-			);
-			name = Main_iPad.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

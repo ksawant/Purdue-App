@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  Purdue App
+
+  Created by George Lo on 3/22/14.
+  Copyright (c) 2014 Purdue iOS Development Club. All rights reserved.
+*/
+
+"ABOUT" = "關於";
+"BANDWIDTH" = "頻寬用量";
+"BLACKBOARD" = "Blackboard";
+"BOOKMARKS" = "書籤";
+"BUS" = "巴士";
+"CAMPUSMAP" = "學校地圖";
+"CANCEL" = "取消";
+"COREC" = "Co-Rec";
+"DIRECTORY" = "Directory";
+"DONE" = "完成";
+"GAMES" = "比賽";
+"GENERAL" = "一般";
+"LABS" = "電腦室";
+"LANGUAGE" = "語言";
+"LIBRARY" = "圖書館";
+"LOADING" = "載入中";
+"MAP" = "地圖";
+"MENU" = "菜單";
+"MIN" = "分鐘";
+"MYMAIL" = "MyMail";
+"NEWS" = "新聞";
+"NO" = "否";
+"PHOTOS" = "照片";
+"RECENTPHOTOS" = "最近的照片";
+"ROUTES" = "路線";
+"ROUTETIME" = "路線                                                          時間";
+"SCHEDULE" = "行程表";
+"SEARCH" = "搜尋";
+"SETTINGS" = "設定";
+"STOPS" = "公車站";
+"STORE" = "普渡商店";
+"VIDEOS" = "影片";
+"WEATHER" = "天氣";
+"YES" = "是";
+
+"LOCAL_TITLE" = "本地化在App重新開啟後才會生效";
+"LOCAL_MESSAGE" = "你希望關閉App並手動點擊App圖示嗎(重新開啟)?";
