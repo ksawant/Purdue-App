@@ -14,7 +14,8 @@
 #import "MailWebViewController.h"
 #import "PhotoViewController.h"
 #import "SettingsViewController.h"
+#import "StoreViewController.h"
 
-@interface TabBarViewController : UITabBarController
+@interface TabBarViewController : UITabBarController <UINavigationControllerDelegate>
 
 @end

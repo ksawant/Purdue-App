@@ -25,7 +25,7 @@
 #define NSLocalizedString(key, message) [I18NUtil localizedString:(key)]
 
 // Debug Configurations
-#define DEBUG_MyPurdue 1
+#define DEBUG_UnitimeHelper 1
 
 // Useful iOS Macros
 #define ApplicationDelegate                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])

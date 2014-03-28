@@ -1,5 +1,5 @@
 //
-//  MyPurdueHelper.h
+//  UnitimeHelper.h
 //  Purdue App
 //
 //  Created by George Lo on 2/25/14.
@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol MyPurdueHelperDelegate;
+@protocol UnitimeHelperDelegate;
 
-@interface MyPurdueHelper : NSObject <UIWebViewDelegate>
+@interface UnitimeHelper : NSObject <UIWebViewDelegate>
 
-@property (nonatomic, weak) id<MyPurdueHelperDelegate> delegate;
+@property (nonatomic, weak) id<UnitimeHelperDelegate> delegate;
 
 - (id)initWithUser: (NSString *)username AndPassword: (NSString *)password;
 
 @end
 
-@protocol MyPurdueHelperDelegate <NSObject>
+@protocol UnitimeHelperDelegate <NSObject>
 
 @optional
 - (void)completeSchedule: (NSArray *)scheduleArray;

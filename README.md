@@ -22,19 +22,19 @@ Purdue-App
 - 04/28 ~ 05/04 App Store submission
 
 ### Localization
-- English
-- Spanish
-- Traditional Chinese
+- English (Everyone)
+- Spanish (Eric/Rhys)
+- Traditional Chinese 
 - Simplified Chinese
-- Japanese
-- Korean
+- Japanese (Ming)
+- Korean (Jiho)
 
 ### Content
 - Maps — `Half-complete`
 - Schedule (Class + Exams) — `Incomplete`
 - Mobile Menu — `Incomplete`
 - Bus — `Complete`
-- News — `Incomplete`
+- News — `Incomplete` (Rhys)
 - Photos — `Complete`
 - Videos — `Incomplete`
 - MyMail — `Complete`

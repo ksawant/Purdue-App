@@ -14,6 +14,7 @@
 
 @implementation TabBarViewController {
     NSMutableArray *tabBarArray;
+    NSDictionary *tabTitleDict;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,7 +30,7 @@
 {
     [super viewDidLoad];
     
-    NSDictionary *tabTitleDict = [NSDictionary dictionaryWithObjects:
+    tabTitleDict = [NSDictionary dictionaryWithObjects:
                                   [NSArray arrayWithObjects:
                                    NSLocalizedString(@"ABOUT", nil), NSLocalizedString(@"BANDWIDTH", nil),
                                    NSLocalizedString(@"BLACKBOARD", nil), NSLocalizedString(@"BUS", nil),
@@ -75,7 +76,6 @@
         UINavigationController *navController;
         NSString *tabTitle = [tabTitleDict objectForKey:[tabBarArray objectAtIndex:i]];
         
-#warning Eric's Part - Please modify AboutViewController
         // About
         if ( [tabTitle isEqualToString:NSLocalizedString(@"ABOUT", nil)] ) {
             AboutViewController *viewController = [[AboutViewController alloc] init];
@@ -118,6 +118,12 @@
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
+        // Store
+        else if( [tabTitle isEqualToString:NSLocalizedString(@"STORE", nil)] ) {
+            StoreViewController *viewController = [[StoreViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
+        
         // Default - Haven't Implement
         else {
             UIViewController *viewController = [[UIViewController alloc] init];
@@ -136,6 +142,23 @@
         [navController setTabBarItem:item];
     }
     [self setViewControllers:controllerAry];
+    
+    self.tabBarController.moreNavigationController.delegate = self;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"15"] style:UIBarButtonItemStyleBordered target:self action:@selector(openSettings:)];
+    UIBarButtonItem *aboutItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"0"] style:UIBarButtonItemStyleBordered target:self action:@selector(openAbout:)];
+    NSArray *barButtonItems = [NSArray arrayWithObjects:settingsItem, aboutItem, nil];
+    self.tabBarController.moreNavigationController.topViewController.navigationItem.leftBarButtonItems = barButtonItems;
+}
+
+- (IBAction)openSettings:(id)sender {
+    
+}
+
+- (IBAction)openAbout:(id)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -149,9 +172,10 @@
         for ( int i=0; i<items.count-1; i++ ) {
             UITabBarItem *tabBarItem = [items objectAtIndex:i];
             // Save if the user customized tabBar
-            if (![tabBarItem.title isEqualToString:[tabBarArray objectAtIndex:i]]) {
-                int index = (int)[tabBarArray indexOfObject:tabBarItem.title];
-                [tabBarArray replaceObjectAtIndex:i withObject:[NSString stringWithFormat:@"%i",index]];
+            if (![tabBarItem.title isEqualToString:[tabTitleDict objectForKey:[tabBarArray objectAtIndex:i]]]) {
+                // Value (Current TabBarItem.title) for Key (Index in tabBarArray)
+                NSInteger index = [[[tabTitleDict allKeysForObject:tabBarItem.title] objectAtIndex:0] integerValue];
+                [tabBarArray replaceObjectAtIndex:i withObject:[NSString stringWithFormat:@"%li",index]];
                 [tabBarArray replaceObjectAtIndex:index withObject:[NSString stringWithFormat:@"%i",i]];
                 [[NSUserDefaults standardUserDefaults] setObject:tabBarArray forKey:@"TabBar_Order"];
                 [[NSUserDefaults standardUserDefaults] synchronize];

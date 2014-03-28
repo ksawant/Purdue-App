@@ -96,11 +96,11 @@
 		5EF3C73218BC0CB900015A27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3C73118BC0CB900015A27 /* UIKit.framework */; };
 		5EF3C73A18BC0CB900015A27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C73918BC0CB900015A27 /* main.m */; };
 		5EF3C73E18BC0CB900015A27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C73D18BC0CB900015A27 /* AppDelegate.m */; };
-		5EF3C74718BC0CB900015A27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C74618BC0CB900015A27 /* ViewController.m */; };
 		5EF3C74918BC0CB900015A27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C74818BC0CB900015A27 /* Images.xcassets */; };
 		5EF3C76618BC6A7700015A27 /* SampleWallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */; };
 		5EF3C76918BC6BC900015A27 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C76818BC6BC900015A27 /* UIImage+ImageEffects.m */; };
-		5EF3C77518BD3CDA00015A27 /* MyPurdueHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C77418BD3CDA00015A27 /* MyPurdueHelper.m */; };
+		5EF3C77518BD3CDA00015A27 /* UnitimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C77418BD3CDA00015A27 /* UnitimeHelper.m */; };
+		5EF482E718E2261D0035C840 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF482E618E2261D0035C840 /* StoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -281,15 +281,15 @@
 		5EF3C73B18BC0CB900015A27 /* Purdue App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Purdue App-Prefix.pch"; sourceTree = "<group>"; };
 		5EF3C73C18BC0CB900015A27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EF3C73D18BC0CB900015A27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5EF3C74518BC0CB900015A27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5EF3C74618BC0CB900015A27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5EF3C74818BC0CB900015A27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5EF3C74F18BC0CB900015A27 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleWallpaper.png; sourceTree = "<group>"; };
 		5EF3C76718BC6BC900015A27 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		5EF3C76818BC6BC900015A27 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		5EF3C77318BD3CDA00015A27 /* MyPurdueHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPurdueHelper.h; sourceTree = "<group>"; };
-		5EF3C77418BD3CDA00015A27 /* MyPurdueHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPurdueHelper.m; sourceTree = "<group>"; };
+		5EF3C77318BD3CDA00015A27 /* UnitimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitimeHelper.h; sourceTree = "<group>"; };
+		5EF3C77418BD3CDA00015A27 /* UnitimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitimeHelper.m; sourceTree = "<group>"; };
+		5EF482E518E2261D0035C840 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		5EF482E618E2261D0035C840 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -668,6 +668,7 @@
 		5EE9217318D0F00A003EE2E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EF482E818E226200035C840 /* Store */,
 				5E73BD1118DE84DB0093EE20 /* Settings */,
 				5E73BD0718DE75540093EE20 /* About */,
 				5E428D1F18D62BFD003172DB /* Photo */,
@@ -676,10 +677,7 @@
 				5EE9217118D0EFDE003EE2E6 /* TabBar */,
 				5EE9206B18D0EBF8003EE2E6 /* Map */,
 				5EE9217718D0FE66003EE2E6 /* Bus */,
-				5EF3C74518BC0CB900015A27 /* ViewController.h */,
-				5EF3C74618BC0CB900015A27 /* ViewController.m */,
-				5EF3C77318BD3CDA00015A27 /* MyPurdueHelper.h */,
-				5EF3C77418BD3CDA00015A27 /* MyPurdueHelper.m */,
+				5EF482E918E227E20035C840 /* Unitime */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -771,6 +769,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5EF482E818E226200035C840 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				5EF482E518E2261D0035C840 /* StoreViewController.h */,
+				5EF482E618E2261D0035C840 /* StoreViewController.m */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		5EF482E918E227E20035C840 /* Unitime */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3C77318BD3CDA00015A27 /* UnitimeHelper.h */,
+				5EF3C77418BD3CDA00015A27 /* UnitimeHelper.m */,
+			);
+			name = Unitime;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -856,7 +872,6 @@
 				5EF3C76918BC6BC900015A27 /* UIImage+ImageEffects.m in Sources */,
 				5EE920C518D0ECD9003EE2E6 /* MRProgressOverlayView.m in Sources */,
 				5EE9213E18D0ECF4003EE2E6 /* PSTCollectionViewUpdateItem.m in Sources */,
-				5EF3C74718BC0CB900015A27 /* ViewController.m in Sources */,
 				5EE9213118D0ECF4003EE2E6 /* MWTapDetectingView.m in Sources */,
 				5EE920C318D0ECD9003EE2E6 /* MRIconView.m in Sources */,
 				5EE9214718D0ECF4003EE2E6 /* NSData+ImageContentType.m in Sources */,
@@ -900,7 +915,7 @@
 				5EE920C218D0ECD9003EE2E6 /* MRCircularProgressView.m in Sources */,
 				5EE9215018D0ECF4003EE2E6 /* UIImage+GIF.m in Sources */,
 				5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */,
-				5EF3C77518BD3CDA00015A27 /* MyPurdueHelper.m in Sources */,
+				5EF3C77518BD3CDA00015A27 /* UnitimeHelper.m in Sources */,
 				5EE9213818D0ECF4003EE2E6 /* PSTCollectionViewCell.m in Sources */,
 				5EE920A318D0ECA3003EE2E6 /* FMResultSet.m in Sources */,
 				5EE9214118D0ECF4003EE2E6 /* PSTGridLayoutRow.m in Sources */,
@@ -908,6 +923,7 @@
 				5EE9217D18D104AC003EE2E6 /* Stop.m in Sources */,
 				5EE9213918D0ECF4003EE2E6 /* PSTCollectionViewController.m in Sources */,
 				5EE9215118D0ECF4003EE2E6 /* UIImage+MultiFormat.m in Sources */,
+				5EF482E718E2261D0035C840 /* StoreViewController.m in Sources */,
 				5EE920BF18D0ECD9003EE2E6 /* MRBlurView.m in Sources */,
 				5E428D2218D63090003172DB /* Album.m in Sources */,
 				5EE920A018D0ECA3003EE2E6 /* FMDatabasePool.m in Sources */,
