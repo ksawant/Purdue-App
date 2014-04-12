@@ -34,42 +34,11 @@
     [self refreshInterface];
 }
 
-- (void)refreshTabBar {
-    NSDictionary *tabTitleDict = [NSDictionary dictionaryWithObjects:
-                                  [NSArray arrayWithObjects:
-                                   NSLocalizedString(@"ABOUT", nil), NSLocalizedString(@"BANDWIDTH", nil),
-                                   NSLocalizedString(@"BLACKBOARD", nil), NSLocalizedString(@"BUS", nil),
-                                   NSLocalizedString(@"COREC", nil), NSLocalizedString(@"DIRECTORY", nil),
-                                   NSLocalizedString(@"GAMES", nil), NSLocalizedString(@"LABS", nil),
-                                   NSLocalizedString(@"LIBRARY", nil), NSLocalizedString(@"MAP", nil),
-                                   NSLocalizedString(@"MENU", nil), NSLocalizedString(@"MYMAIL", nil),
-                                   NSLocalizedString(@"NEWS", nil), NSLocalizedString(@"PHOTOS", nil),
-                                   NSLocalizedString(@"SCHEDULE", nil), NSLocalizedString(@"SETTINGS", nil),
-                                   NSLocalizedString(@"STORE", nil), NSLocalizedString(@"VIDEOS", nil),
-                                   NSLocalizedString(@"WEATHER", nil),
-                                   nil]
-                                                             forKeys:
-                                  [NSArray arrayWithObjects:
-                                   @"0", @"1", @"2",
-                                   @"3", @"4", @"5",
-                                   @"6", @"7", @"8",
-                                   @"9", @"10", @"11",
-                                   @"12", @"13", @"14",
-                                   @"15", @"16", @"17",
-                                   @"18",
-                                   nil]
-                                  ];
-    NSArray *tbArray = [[[NSUserDefaults standardUserDefaults] objectForKey:@"TabBar_Order"] mutableCopy];
-    for( int i=0; i<self.tabBarController.tabBar.items.count; i++ ) {
-        [[self.tabBarController.tabBar.items objectAtIndex:i] setTitle:[tabTitleDict objectForKey:[tbArray objectAtIndex:i]]];
-    }
-}
-
 - (void)refreshInterface {
     self.navigationItem.title = NSLocalizedString(@"SETTINGS", nil);
     
-    sectionTitleAry = [NSMutableArray arrayWithObjects:NSLocalizedString(@"GENERAL", nil), nil];
-    rowTitleAry = [NSMutableArray arrayWithObjects:[NSArray arrayWithObjects:NSLocalizedString(@"LANGUAGE", nil), nil], nil];
+    sectionTitleAry = [NSMutableArray arrayWithObjects:NSLocalizedString(@"GENERAL", nil), NSLocalizedString(@"MAP", nil), @"", nil];
+    rowTitleAry = [NSMutableArray arrayWithObjects:[NSArray arrayWithObjects:NSLocalizedString(@"LANGUAGE", nil), nil], [NSArray arrayWithObjects:NSLocalizedString(@"MAPTYPE", nil), NSLocalizedString(@"MAPOVERLAY", nil), nil], [NSArray arrayWithObject:NSLocalizedString(@"SIGNOUT", nil)], nil];
     NSString *Language = @"English"; // Defaults to English
     NSString *LanguageCode = [[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0];
     if ( [LanguageCode isEqualToString:@"en"] ) {
@@ -85,7 +54,8 @@
     } else if ( [LanguageCode isEqualToString:@"ko"] ) {
         Language = @"한국의";
     }
-    rowDetailAry = [NSMutableArray arrayWithObjects:[NSArray arrayWithObjects:Language, nil], nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:NSLocalizedString(@"STANDARD", nil), NSLocalizedString(@"SATELLITE", nil), NSLocalizedString(@"HYBRID", nil), nil] forKeys:[NSArray arrayWithObjects:[NSNumber numberWithInt:0], [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], nil]];
+    rowDetailAry = [NSMutableArray arrayWithObjects:[NSArray arrayWithObjects:Language, nil], [NSArray arrayWithObjects:[dictionary objectForKey:[NSNumber numberWithInteger:[[NSUserDefaults standardUserDefaults] integerForKey:@"MapType"]]], @"", nil], [NSArray arrayWithObject:@""], nil];
     
     [self.tableView reloadData];
 }
@@ -126,15 +96,38 @@
     cell.textLabel.text = [[rowTitleAry objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = [[rowDetailAry objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        UISwitch *overlaySwitch = [[UISwitch alloc] init];
+        overlaySwitch.on = ![[NSUserDefaults standardUserDefaults] boolForKey:@"NoOverlay"];
+        [overlaySwitch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+        cell.accessoryView = overlaySwitch;
+    } else if (indexPath.section==2 ) {
+        cell.textLabel.textColor = [UIColor redColor];
+    }
     
     return cell;
 }
 
+- (IBAction)switchChanged:(id)sender {
+    UISwitch *overlaySwitch = (UISwitch *)sender;
+    [[NSUserDefaults standardUserDefaults] setBool:!overlaySwitch.on forKey:@"NoOverlay"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section==0) {
-        if (indexPath.row==0) {
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
             UIActionSheet *languageAS = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"LANGUAGE", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"CANCEL", nil) destructiveButtonTitle:nil otherButtonTitles:@"English", @"簡體中文", @"繁體中文", @"日本語", @"español", @"한국의", nil];
             [languageAS showFromRect:[tableView cellForRowAtIndexPath:indexPath].frame inView:self.view animated:YES];
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            UIActionSheet *mapttypeAS = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"MAPTYPE", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"CANCEL", nil) destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"STANDARD", nil), NSLocalizedString(@"SATELLITE", nil), NSLocalizedString(@"HYBRID", nil), nil];
+            [mapttypeAS showFromRect:[tableView cellForRowAtIndexPath:indexPath].frame inView:self.view animated:YES];
+        }
+    } else if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -157,8 +150,12 @@
             } else if ([buttonTitle isEqualToString:@"한국의"]) {
                 [I18NUtil setLanguage:@"ko"];
             }
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOCAL_TITLE", nil) message:NSLocalizedString(@"LOCAL_MESSAGE", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"NO", nil) otherButtonTitles:NSLocalizedString(@"YES", nil), nil] show];
+        } else if ([actionSheet.title isEqualToString:NSLocalizedString(@"MAPTYPE", nil)]) {
+            [[NSUserDefaults standardUserDefaults] setInteger:buttonIndex forKey:@"MapType"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self refreshInterface];
         }
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOCAL_TITLE", nil) message:NSLocalizedString(@"LOCAL_MESSAGE", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"NO", nil) otherButtonTitles:NSLocalizedString(@"YES", nil), nil] show];
     }
 }
 

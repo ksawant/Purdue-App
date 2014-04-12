@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "MapOverlay.h"
+#import "MapOverlayRenderer.h"
 
-@interface MapViewController : UIViewController <UISearchBarDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, UISearchBarDelegate>
 
 @end

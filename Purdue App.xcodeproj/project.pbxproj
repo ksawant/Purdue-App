@@ -19,8 +19,29 @@
 		5E73BD1518DE9E830093EE20 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1318DE9E830093EE20 /* Main_iPhone.storyboard */; };
 		5E73BD1618DEB7D40093EE20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1818DEB7D40093EE20 /* Localizable.strings */; };
 		5E73BD1A18DEB8120093EE20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1918DEB8120093EE20 /* InfoPlist.strings */; };
+		5E91CB7518F31FC400DA7635 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB7418F31FC400DA7635 /* ScheduleViewController.m */; };
+		5E91CB7818F3A36200DA7635 /* CourseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB7718F3A36200DA7635 /* CourseInfo.m */; };
+		5E91CB7B18F3A37100DA7635 /* ExamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB7A18F3A37100DA7635 /* ExamInfo.m */; };
+		5E91CBA518F49E3400DA7635 /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB9318F49E3400DA7635 /* NSDate+convenience.m */; };
+		5E91CBA618F49E3400DA7635 /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB9518F49E3400DA7635 /* NSMutableArray+convenience.m */; };
+		5E91CBA718F49E3400DA7635 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB9718F49E3400DA7635 /* UIColor+expanded.m */; };
+		5E91CBA818F49E3400DA7635 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB9918F49E3400DA7635 /* UIView+convenience.m */; };
+		5E91CBAA18F49E3400DA7635 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB9D18F49E3400DA7635 /* VRGCalendarView.m */; };
+		5E91CBBA18F6019000DA7635 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E91CBB918F6019000DA7635 /* MapKit.framework */; };
+		5E91CBBD18F6055B00DA7635 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CBBC18F6055B00DA7635 /* MapOverlay.m */; };
+		5E91CBC018F6061700DA7635 /* MapOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CBBF18F6061700DA7635 /* MapOverlayRenderer.m */; };
 		5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */; };
 		5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC07EA218D1598D00577F92 /* StopDetailViewController.m */; };
+		5EDB88E418F7CB86000738A1 /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88E318F7CB86000738A1 /* VideosViewController.m */; };
+		5EDB88E918F7D106000738A1 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88E818F7D106000738A1 /* AsyncImageView.m */; };
+		5EDB88ED18F7D50B000738A1 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88EC18F7D50B000738A1 /* FXBlurView.m */; };
+		5EDB88F018F7D5C9000738A1 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88EF18F7D5C9000738A1 /* SignInViewController.m */; };
+		5EDB88F318F7DB20000738A1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB88F218F7DB20000738A1 /* Accelerate.framework */; };
+		5EDB88F718F7DC10000738A1 /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88F618F7DC10000738A1 /* UIViewController+CWPopup.m */; };
+		5EDB88F918F7DD0A000738A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB88F818F7DD0A000738A1 /* QuartzCore.framework */; };
+		5EDB88FC18F7F74B000738A1 /* BandwidthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88FB18F7F74B000738A1 /* BandwidthViewController.m */; };
+		5EDB890018F8049C000738A1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88FF18F8049C000738A1 /* MenuViewController.m */; };
+		5EDB890418F809BA000738A1 /* BlackboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB890318F809BA000738A1 /* BlackboardViewController.m */; };
 		5EE9206718D0EB7B003EE2E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */; };
 		5EE9206A18D0EB9E003EE2E6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9206918D0EB9E003EE2E6 /* MapViewController.m */; };
 		5EE9208D18D0EC84003EE2E6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9207F18D0EC84003EE2E6 /* Reachability.m */; };
@@ -81,9 +102,6 @@
 		5EE9215218D0ECF4003EE2E6 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9212318D0ECF4003EE2E6 /* UIImage+WebP.m */; };
 		5EE9215318D0ECF4003EE2E6 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9212518D0ECF4003EE2E6 /* UIImageView+WebCache.m */; };
 		5EE9215418D0ECF4003EE2E6 /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5EE9212718D0ECF4003EE2E6 /* MWPhotoBrowser.bundle */; };
-		5EE9215F18D0ED21003EE2E6 /* MZDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9215A18D0ED21003EE2E6 /* MZDay.m */; };
-		5EE9216018D0ED21003EE2E6 /* MZDayPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9215C18D0ED21003EE2E6 /* MZDayPicker.m */; };
-		5EE9216118D0ED21003EE2E6 /* MZDayPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9215E18D0ED21003EE2E6 /* MZDayPickerCell.m */; };
 		5EE9216618D0ED44003EE2E6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5EE9216318D0ED44003EE2E6 /* .gitignore */; };
 		5EE9216718D0ED44003EE2E6 /* SuProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9216518D0ED44003EE2E6 /* SuProgress.m */; };
 		5EE9216B18D0ED5A003EE2E6 /* CWStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9216A18D0ED5A003EE2E6 /* CWStatusBarNotification.m */; };
@@ -99,8 +117,8 @@
 		5EF3C74918BC0CB900015A27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C74818BC0CB900015A27 /* Images.xcassets */; };
 		5EF3C76618BC6A7700015A27 /* SampleWallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */; };
 		5EF3C76918BC6BC900015A27 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C76818BC6BC900015A27 /* UIImage+ImageEffects.m */; };
-		5EF3C77518BD3CDA00015A27 /* UnitimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C77418BD3CDA00015A27 /* UnitimeHelper.m */; };
 		5EF482E718E2261D0035C840 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF482E618E2261D0035C840 /* StoreViewController.m */; };
+		5EF944BD18E9E5540003F130 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF944BC18E9E5540003F130 /* WeatherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,10 +143,49 @@
 		5E73BD1718DEB7D40093EE20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E73BD1918DEB8120093EE20 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5E73BD1B18DEB81D0093EE20 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5E91CB7318F31FC400DA7635 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		5E91CB7418F31FC400DA7635 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		5E91CB7618F3A36200DA7635 /* CourseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInfo.h; sourceTree = "<group>"; };
+		5E91CB7718F3A36200DA7635 /* CourseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInfo.m; sourceTree = "<group>"; };
+		5E91CB7918F3A37100DA7635 /* ExamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamInfo.h; sourceTree = "<group>"; };
+		5E91CB7A18F3A37100DA7635 /* ExamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamInfo.m; sourceTree = "<group>"; };
+		5E91CB9218F49E3400DA7635 /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
+		5E91CB9318F49E3400DA7635 /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
+		5E91CB9418F49E3400DA7635 /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
+		5E91CB9518F49E3400DA7635 /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+convenience.m"; sourceTree = "<group>"; };
+		5E91CB9618F49E3400DA7635 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		5E91CB9718F49E3400DA7635 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		5E91CB9818F49E3400DA7635 /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convenience.h"; sourceTree = "<group>"; };
+		5E91CB9918F49E3400DA7635 /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
+		5E91CB9C18F49E3400DA7635 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
+		5E91CB9D18F49E3400DA7635 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
+		5E91CBB918F6019000DA7635 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5E91CBBB18F6055B00DA7635 /* MapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlay.h; sourceTree = "<group>"; };
+		5E91CBBC18F6055B00DA7635 /* MapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlay.m; sourceTree = "<group>"; };
+		5E91CBBE18F6061700DA7635 /* MapOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayRenderer.h; sourceTree = "<group>"; };
+		5E91CBBF18F6061700DA7635 /* MapOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayRenderer.m; sourceTree = "<group>"; };
 		5EB99F7818CFB1F60073C4E8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		5EC07EA118D1598D00577F92 /* StopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopDetailViewController.h; sourceTree = "<group>"; };
 		5EC07EA218D1598D00577F92 /* StopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopDetailViewController.m; sourceTree = "<group>"; };
+		5EDB88E218F7CB86000738A1 /* VideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosViewController.h; sourceTree = "<group>"; };
+		5EDB88E318F7CB86000738A1 /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
+		5EDB88E718F7D106000738A1 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		5EDB88E818F7D106000738A1 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		5EDB88EB18F7D50B000738A1 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		5EDB88EC18F7D50B000738A1 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		5EDB88EE18F7D5C9000738A1 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		5EDB88EF18F7D5C9000738A1 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		5EDB88F218F7DB20000738A1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		5EDB88F518F7DC10000738A1 /* UIViewController+CWPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CWPopup.h"; sourceTree = "<group>"; };
+		5EDB88F618F7DC10000738A1 /* UIViewController+CWPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CWPopup.m"; sourceTree = "<group>"; };
+		5EDB88F818F7DD0A000738A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5EDB88FA18F7F74B000738A1 /* BandwidthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BandwidthViewController.h; sourceTree = "<group>"; };
+		5EDB88FB18F7F74B000738A1 /* BandwidthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BandwidthViewController.m; sourceTree = "<group>"; };
+		5EDB88FE18F8049C000738A1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		5EDB88FF18F8049C000738A1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		5EDB890218F809BA000738A1 /* BlackboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlackboardViewController.h; path = "Purdue App/BlackboardViewController.h"; sourceTree = "<group>"; };
+		5EDB890318F809BA000738A1 /* BlackboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlackboardViewController.m; path = "Purdue App/BlackboardViewController.m"; sourceTree = "<group>"; };
 		5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5EE9206818D0EB9E003EE2E6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		5EE9206918D0EB9E003EE2E6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
@@ -253,12 +310,6 @@
 		5EE9212418D0ECF4003EE2E6 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		5EE9212518D0ECF4003EE2E6 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		5EE9212718D0ECF4003EE2E6 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
-		5EE9215918D0ED21003EE2E6 /* MZDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDay.h; sourceTree = "<group>"; };
-		5EE9215A18D0ED21003EE2E6 /* MZDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDay.m; sourceTree = "<group>"; };
-		5EE9215B18D0ED21003EE2E6 /* MZDayPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDayPicker.h; sourceTree = "<group>"; };
-		5EE9215C18D0ED21003EE2E6 /* MZDayPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDayPicker.m; sourceTree = "<group>"; };
-		5EE9215D18D0ED21003EE2E6 /* MZDayPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDayPickerCell.h; sourceTree = "<group>"; };
-		5EE9215E18D0ED21003EE2E6 /* MZDayPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDayPickerCell.m; sourceTree = "<group>"; };
 		5EE9216318D0ED44003EE2E6 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5EE9216418D0ED44003EE2E6 /* SuProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuProgress.h; sourceTree = "<group>"; };
 		5EE9216518D0ED44003EE2E6 /* SuProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuProgress.m; sourceTree = "<group>"; };
@@ -286,10 +337,10 @@
 		5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleWallpaper.png; sourceTree = "<group>"; };
 		5EF3C76718BC6BC900015A27 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		5EF3C76818BC6BC900015A27 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		5EF3C77318BD3CDA00015A27 /* UnitimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitimeHelper.h; sourceTree = "<group>"; };
-		5EF3C77418BD3CDA00015A27 /* UnitimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitimeHelper.m; sourceTree = "<group>"; };
 		5EF482E518E2261D0035C840 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		5EF482E618E2261D0035C840 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		5EF944BB18E9E5540003F130 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		5EF944BC18E9E5540003F130 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +348,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDB88F918F7DD0A000738A1 /* QuartzCore.framework in Frameworks */,
+				5EDB88F318F7DB20000738A1 /* Accelerate.framework in Frameworks */,
+				5E91CBBA18F6019000DA7635 /* MapKit.framework in Frameworks */,
 				5EE9216F18D0EE68003EE2E6 /* libsqlite3.0.dylib in Frameworks */,
 				5EE9206718D0EB7B003EE2E6 /* CoreLocation.framework in Frameworks */,
 				5EF3C73018BC0CB900015A27 /* CoreGraphics.framework in Frameworks */,
@@ -362,11 +416,105 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		5E91CB8C18F49E3400DA7635 /* Vurig Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				5E91CB9218F49E3400DA7635 /* NSDate+convenience.h */,
+				5E91CB9318F49E3400DA7635 /* NSDate+convenience.m */,
+				5E91CB9418F49E3400DA7635 /* NSMutableArray+convenience.h */,
+				5E91CB9518F49E3400DA7635 /* NSMutableArray+convenience.m */,
+				5E91CB9618F49E3400DA7635 /* UIColor+expanded.h */,
+				5E91CB9718F49E3400DA7635 /* UIColor+expanded.m */,
+				5E91CB9818F49E3400DA7635 /* UIView+convenience.h */,
+				5E91CB9918F49E3400DA7635 /* UIView+convenience.m */,
+				5E91CB9C18F49E3400DA7635 /* VRGCalendarView.h */,
+				5E91CB9D18F49E3400DA7635 /* VRGCalendarView.m */,
+			);
+			path = "Vurig Calendar";
+			sourceTree = "<group>";
+		};
+		5EDB88E518F7CB8A000738A1 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB88E218F7CB86000738A1 /* VideosViewController.h */,
+				5EDB88E318F7CB86000738A1 /* VideosViewController.m */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+		5EDB88E618F7D106000738A1 /* AsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB88E718F7D106000738A1 /* AsyncImageView.h */,
+				5EDB88E818F7D106000738A1 /* AsyncImageView.m */,
+			);
+			path = AsyncImageView;
+			sourceTree = "<group>";
+		};
+		5EDB88EA18F7D50B000738A1 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB88EB18F7D50B000738A1 /* FXBlurView.h */,
+				5EDB88EC18F7D50B000738A1 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		5EDB88F118F7D5CC000738A1 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB88EE18F7D5C9000738A1 /* SignInViewController.h */,
+				5EDB88EF18F7D5C9000738A1 /* SignInViewController.m */,
+			);
+			name = "Sign In";
+			sourceTree = "<group>";
+		};
+		5EDB88F418F7DC10000738A1 /* CWPopup */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB88F518F7DC10000738A1 /* UIViewController+CWPopup.h */,
+				5EDB88F618F7DC10000738A1 /* UIViewController+CWPopup.m */,
+			);
+			path = CWPopup;
+			sourceTree = "<group>";
+		};
+		5EDB88FD18F7F750000738A1 /* Bandwidth */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB88FA18F7F74B000738A1 /* BandwidthViewController.h */,
+				5EDB88FB18F7F74B000738A1 /* BandwidthViewController.m */,
+			);
+			name = Bandwidth;
+			sourceTree = "<group>";
+		};
+		5EDB890118F804A0000738A1 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB88FE18F8049C000738A1 /* MenuViewController.h */,
+				5EDB88FF18F8049C000738A1 /* MenuViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		5EDB890518F809BE000738A1 /* Blackboard */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB890218F809BA000738A1 /* BlackboardViewController.h */,
+				5EDB890318F809BA000738A1 /* BlackboardViewController.m */,
+			);
+			name = Blackboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		5EE9206B18D0EBF8003EE2E6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				5EE9206818D0EB9E003EE2E6 /* MapViewController.h */,
 				5EE9206918D0EB9E003EE2E6 /* MapViewController.m */,
+				5E91CBBB18F6055B00DA7635 /* MapOverlay.h */,
+				5E91CBBC18F6055B00DA7635 /* MapOverlay.m */,
+				5E91CBBE18F6061700DA7635 /* MapOverlayRenderer.h */,
+				5E91CBBF18F6061700DA7635 /* MapOverlayRenderer.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -600,19 +748,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		5EE9215818D0ED21003EE2E6 /* MZDayPicker */ = {
-			isa = PBXGroup;
-			children = (
-				5EE9215918D0ED21003EE2E6 /* MZDay.h */,
-				5EE9215A18D0ED21003EE2E6 /* MZDay.m */,
-				5EE9215B18D0ED21003EE2E6 /* MZDayPicker.h */,
-				5EE9215C18D0ED21003EE2E6 /* MZDayPicker.m */,
-				5EE9215D18D0ED21003EE2E6 /* MZDayPickerCell.h */,
-				5EE9215E18D0ED21003EE2E6 /* MZDayPickerCell.m */,
-			);
-			path = MZDayPicker;
-			sourceTree = "<group>";
-		};
 		5EE9216218D0ED44003EE2E6 /* SuProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,10 +770,13 @@
 		5EE9217018D0EFD1003EE2E6 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5EDB88F418F7DC10000738A1 /* CWPopup */,
+				5EDB88EA18F7D50B000738A1 /* FXBlurView */,
+				5EDB88E618F7D106000738A1 /* AsyncImageView */,
+				5E91CB8C18F49E3400DA7635 /* Vurig Calendar */,
 				5E73BD0D18DE84610093EE20 /* I18NUtil */,
 				5EE9216818D0ED5A003EE2E6 /* CWStatusBarNotification */,
 				5EE9216218D0ED44003EE2E6 /* SuProgress */,
-				5EE9215818D0ED21003EE2E6 /* MZDayPicker */,
 				5EE920C918D0ECF4003EE2E6 /* MWPhotoBrowser */,
 				5EE920A418D0ECD9003EE2E6 /* MRProgress */,
 				5EE9209218D0ECA3003EE2E6 /* FMDB */,
@@ -668,6 +806,7 @@
 		5EE9217318D0F00A003EE2E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EDB890518F809BE000738A1 /* Blackboard */,
 				5EF482E818E226200035C840 /* Store */,
 				5E73BD1118DE84DB0093EE20 /* Settings */,
 				5E73BD0718DE75540093EE20 /* About */,
@@ -675,9 +814,14 @@
 				5E428D1B18D575E0003172DB /* Directory */,
 				5E428CF118D48E34003172DB /* Mail */,
 				5EE9217118D0EFDE003EE2E6 /* TabBar */,
+				5EF944BE18E9E5570003F130 /* Weather */,
+				5EDB88E518F7CB8A000738A1 /* Videos */,
 				5EE9206B18D0EBF8003EE2E6 /* Map */,
 				5EE9217718D0FE66003EE2E6 /* Bus */,
-				5EF482E918E227E20035C840 /* Unitime */,
+				5EDB88FD18F7F750000738A1 /* Bandwidth */,
+				5EDB88F118F7D5CC000738A1 /* Sign In */,
+				5EDB890118F804A0000738A1 /* Menu */,
+				5EF482E918E227E20035C840 /* Schedule */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -728,6 +872,9 @@
 		5EF3C72C18BC0CB900015A27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5EDB88F818F7DD0A000738A1 /* QuartzCore.framework */,
+				5EDB88F218F7DB20000738A1 /* Accelerate.framework */,
+				5E91CBB918F6019000DA7635 /* MapKit.framework */,
 				5EE9216E18D0EE68003EE2E6 /* libsqlite3.0.dylib */,
 				5EE9216C18D0EDE0003EE2E6 /* libsqlite3.dylib */,
 				5EE9206618D0EB7B003EE2E6 /* CoreLocation.framework */,
@@ -778,13 +925,26 @@
 			name = Store;
 			sourceTree = "<group>";
 		};
-		5EF482E918E227E20035C840 /* Unitime */ = {
+		5EF482E918E227E20035C840 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				5EF3C77318BD3CDA00015A27 /* UnitimeHelper.h */,
-				5EF3C77418BD3CDA00015A27 /* UnitimeHelper.m */,
+				5E91CB7318F31FC400DA7635 /* ScheduleViewController.h */,
+				5E91CB7418F31FC400DA7635 /* ScheduleViewController.m */,
+				5E91CB7618F3A36200DA7635 /* CourseInfo.h */,
+				5E91CB7718F3A36200DA7635 /* CourseInfo.m */,
+				5E91CB7918F3A37100DA7635 /* ExamInfo.h */,
+				5E91CB7A18F3A37100DA7635 /* ExamInfo.m */,
 			);
-			name = Unitime;
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		5EF944BE18E9E5570003F130 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				5EF944BB18E9E5540003F130 /* WeatherViewController.h */,
+				5EF944BC18E9E5540003F130 /* WeatherViewController.m */,
+			);
+			name = Weather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -865,6 +1025,7 @@
 				5EE9214218D0ECF4003EE2E6 /* PSTGridLayoutSection.m in Sources */,
 				5EE9217A18D102BA003EE2E6 /* Route.m in Sources */,
 				5EE9213718D0ECF4003EE2E6 /* PSTCollectionView.m in Sources */,
+				5E91CB7818F3A36200DA7635 /* CourseInfo.m in Sources */,
 				5EE9215218D0ECF4003EE2E6 /* UIImage+WebP.m in Sources */,
 				5EE9213A18D0ECF4003EE2E6 /* PSTCollectionViewData.m in Sources */,
 				5EE920C118D0ECD9003EE2E6 /* MRActivityIndicatorView.m in Sources */,
@@ -873,13 +1034,14 @@
 				5EE920C518D0ECD9003EE2E6 /* MRProgressOverlayView.m in Sources */,
 				5EE9213E18D0ECF4003EE2E6 /* PSTCollectionViewUpdateItem.m in Sources */,
 				5EE9213118D0ECF4003EE2E6 /* MWTapDetectingView.m in Sources */,
+				5EDB88ED18F7D50B000738A1 /* FXBlurView.m in Sources */,
 				5EE920C318D0ECD9003EE2E6 /* MRIconView.m in Sources */,
 				5EE9214718D0ECF4003EE2E6 /* NSData+ImageContentType.m in Sources */,
-				5EE9216118D0ED21003EE2E6 /* MZDayPickerCell.m in Sources */,
 				5EE9213218D0ECF4003EE2E6 /* MWZoomingScrollView.m in Sources */,
 				5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */,
 				5EE9214518D0ECF4003EE2E6 /* MKAnnotationView+WebCache.m in Sources */,
 				5EE9209E18D0ECA3003EE2E6 /* FMDatabase.m in Sources */,
+				5E91CBA718F49E3400DA7635 /* UIColor+expanded.m in Sources */,
 				5E428CF418D48E5B003172DB /* MailWebViewController.m in Sources */,
 				5EE9214F18D0ECF4003EE2E6 /* UIButton+WebCache.m in Sources */,
 				5EE9216B18D0ED5A003EE2E6 /* CWStatusBarNotification.m in Sources */,
@@ -897,35 +1059,47 @@
 				5EE920A118D0ECA3003EE2E6 /* FMDatabaseQueue.m in Sources */,
 				5EE9213018D0ECF4003EE2E6 /* MWTapDetectingImageView.m in Sources */,
 				5EE9214A18D0ECF4003EE2E6 /* SDWebImageDecoder.m in Sources */,
-				5EE9215F18D0ED21003EE2E6 /* MZDay.m in Sources */,
 				5EE9214018D0ECF4003EE2E6 /* PSTGridLayoutItem.m in Sources */,
 				5EE9213618D0ECF4003EE2E6 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				5EF3C73E18BC0CB900015A27 /* AppDelegate.m in Sources */,
 				5EF3C73A18BC0CB900015A27 /* main.m in Sources */,
 				5EE9212D18D0ECF4003EE2E6 /* MWGridViewController.m in Sources */,
 				5EE9213418D0ECF4003EE2E6 /* MBProgressHUD.m in Sources */,
+				5E91CBC018F6061700DA7635 /* MapOverlayRenderer.m in Sources */,
+				5EDB890018F8049C000738A1 /* MenuViewController.m in Sources */,
+				5E91CBA518F49E3400DA7635 /* NSDate+convenience.m in Sources */,
 				5EE920C718D0ECD9003EE2E6 /* MRMessageInterceptor.m in Sources */,
-				5EE9216018D0ED21003EE2E6 /* MZDayPicker.m in Sources */,
+				5E91CB7B18F3A37100DA7635 /* ExamInfo.m in Sources */,
 				5EE9209F18D0ECA3003EE2E6 /* FMDatabaseAdditions.m in Sources */,
+				5EDB88E918F7D106000738A1 /* AsyncImageView.m in Sources */,
 				5EE9217618D0FE5F003EE2E6 /* BusViewController.m in Sources */,
+				5EDB88F018F7D5C9000738A1 /* SignInViewController.m in Sources */,
+				5E91CB7518F31FC400DA7635 /* ScheduleViewController.m in Sources */,
 				5E428D1A18D575D8003172DB /* DirectoryViewController.m in Sources */,
+				5EDB890418F809BA000738A1 /* BlackboardViewController.m in Sources */,
+				5E91CBBD18F6055B00DA7635 /* MapOverlay.m in Sources */,
 				5EE9214618D0ECF4003EE2E6 /* NSData+GIF.m in Sources */,
 				5EE9214818D0ECF4003EE2E6 /* SDImageCache.m in Sources */,
 				5E73BD1018DE84D40093EE20 /* SettingsViewController.m in Sources */,
 				5EE920C218D0ECD9003EE2E6 /* MRCircularProgressView.m in Sources */,
 				5EE9215018D0ECF4003EE2E6 /* UIImage+GIF.m in Sources */,
 				5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */,
-				5EF3C77518BD3CDA00015A27 /* UnitimeHelper.m in Sources */,
+				5E91CBA618F49E3400DA7635 /* NSMutableArray+convenience.m in Sources */,
 				5EE9213818D0ECF4003EE2E6 /* PSTCollectionViewCell.m in Sources */,
 				5EE920A318D0ECA3003EE2E6 /* FMResultSet.m in Sources */,
+				5EF944BD18E9E5540003F130 /* WeatherViewController.m in Sources */,
+				5E91CBA818F49E3400DA7635 /* UIView+convenience.m in Sources */,
 				5EE9214118D0ECF4003EE2E6 /* PSTGridLayoutRow.m in Sources */,
 				5EE9212B18D0ECF4003EE2E6 /* MWCaptionView.m in Sources */,
+				5EDB88FC18F7F74B000738A1 /* BandwidthViewController.m in Sources */,
 				5EE9217D18D104AC003EE2E6 /* Stop.m in Sources */,
 				5EE9213918D0ECF4003EE2E6 /* PSTCollectionViewController.m in Sources */,
 				5EE9215118D0ECF4003EE2E6 /* UIImage+MultiFormat.m in Sources */,
 				5EF482E718E2261D0035C840 /* StoreViewController.m in Sources */,
 				5EE920BF18D0ECD9003EE2E6 /* MRBlurView.m in Sources */,
+				5EDB88E418F7CB86000738A1 /* VideosViewController.m in Sources */,
 				5E428D2218D63090003172DB /* Album.m in Sources */,
+				5EDB88F718F7DC10000738A1 /* UIViewController+CWPopup.m in Sources */,
 				5EE920A018D0ECA3003EE2E6 /* FMDatabasePool.m in Sources */,
 				5E73BD0C18DE845B0093EE20 /* I18NUtil.m in Sources */,
 				5EE9212F18D0ECF4003EE2E6 /* MWPhotoBrowser.m in Sources */,
@@ -935,6 +1109,7 @@
 				5EE9213F18D0ECF4003EE2E6 /* PSTGridLayoutInfo.m in Sources */,
 				5E73BD0618DE75500093EE20 /* AboutViewController.m in Sources */,
 				5EE9214C18D0ECF4003EE2E6 /* SDWebImageDownloaderOperation.m in Sources */,
+				5E91CBAA18F49E3400DA7635 /* VRGCalendarView.m in Sources */,
 				5EE9213B18D0ECF4003EE2E6 /* PSTCollectionViewFlowLayout.m in Sources */,
 				5EE9206A18D0EB9E003EE2E6 /* MapViewController.m in Sources */,
 				5E428CF718D48FB9003172DB /* RouteDetailViewController.m in Sources */,

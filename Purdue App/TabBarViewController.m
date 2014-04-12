@@ -82,8 +82,20 @@
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
+        // Bandwidth
+        else if ( [tabTitle isEqualToString:NSLocalizedString(@"BANDWIDTH", nil)] ) {
+            BandwidthViewController *viewController = [[BandwidthViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
+        
+        // Blackboard
+        else if ( [tabTitle isEqualToString:NSLocalizedString(@"BLACKBOARD", nil)] ) {
+            BlackboardViewController *viewController = [[BlackboardViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
+        
         // Bus
-        if ( [tabTitle isEqualToString:NSLocalizedString(@"BUS", nil)] ) {
+        else if ( [tabTitle isEqualToString:NSLocalizedString(@"BUS", nil)] ) {
             BusViewController *viewController = [[BusViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
@@ -100,6 +112,12 @@
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
+        // Menu
+        else if ( [tabTitle isEqualToString:NSLocalizedString(@"MENU", nil)] ) {
+            MenuViewController *viewController = [[MenuViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
+        
         // MyMail
         else if ( [tabTitle isEqualToString:NSLocalizedString(@"MYMAIL", nil)] ) {
             MailWebViewController *viewController = [[MailWebViewController alloc] init];
@@ -112,6 +130,12 @@
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
+        // Schedule
+        else if( [tabTitle isEqualToString:NSLocalizedString(@"SCHEDULE", nil)] ) {
+            ScheduleViewController *viewController = [[ScheduleViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
+        
         // Settings
         else if( [tabTitle isEqualToString:NSLocalizedString(@"SETTINGS", nil)] ) {
             SettingsViewController *viewController = [[SettingsViewController alloc] init];
@@ -121,6 +145,12 @@
         // Store
         else if( [tabTitle isEqualToString:NSLocalizedString(@"STORE", nil)] ) {
             StoreViewController *viewController = [[StoreViewController alloc] init];
+            navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        }
+        
+        // Videos
+        else if( [tabTitle isEqualToString:NSLocalizedString(@"VIDEOS", nil)] ) {
+            VideosViewController *viewController = [[VideosViewController alloc] init];
             navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         }
         
@@ -175,7 +205,7 @@
             if (![tabBarItem.title isEqualToString:[tabTitleDict objectForKey:[tabBarArray objectAtIndex:i]]]) {
                 // Value (Current TabBarItem.title) for Key (Index in tabBarArray)
                 NSInteger index = [[[tabTitleDict allKeysForObject:tabBarItem.title] objectAtIndex:0] integerValue];
-                [tabBarArray replaceObjectAtIndex:i withObject:[NSString stringWithFormat:@"%li",index]];
+                [tabBarArray replaceObjectAtIndex:i withObject:[NSString stringWithFormat:@"%li",(long)index]];
                 [tabBarArray replaceObjectAtIndex:index withObject:[NSString stringWithFormat:@"%i",i]];
                 [[NSUserDefaults standardUserDefaults] setObject:tabBarArray forKey:@"TabBar_Order"];
                 [[NSUserDefaults standardUserDefaults] synchronize];

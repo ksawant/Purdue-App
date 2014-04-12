@@ -25,6 +25,22 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    mapView.mapType = [[NSUserDefaults standardUserDefaults] integerForKey:@"MapType"];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"NoOverlay"]) {
+        [mapView removeOverlays:mapView.overlays];
+    } else {
+        MapOverlay *overlay = [[MapOverlay alloc] initWithRect:MKMapRectMake(40.426526, -86.914559, 4, 4) andCoordinate:CLLocationCoordinate2DMake(40.426526, -86.914559)];
+        [mapView addOverlay:overlay];
+    }
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
+    MapOverlayRenderer *renderer = [[MapOverlayRenderer alloc] initWithOverlay:overlay];
+    return renderer;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,6 +65,7 @@
     mapView.showsBuildings = YES;
     mapView.showsPointsOfInterest = YES;
     mapView.showsUserLocation = YES;
+    mapView.delegate = self;
     [self.view addSubview:mapView];
 }
 
