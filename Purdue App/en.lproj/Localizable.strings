@@ -6,40 +6,100 @@
   Copyright (c) 2014 Purdue iOS Development Club. All rights reserved.
 */
 
-"ABOUT" = "About";
-"BANDWIDTH" = "Bandwidth";
-"BLACKBOARD" = "Blackboard";
-"BOOKMARKS" = "Bookmarks";
-"BUS" = "Bus";
-"CAMPUSMAP" = "Campus Map";
+// Common Localization Stuff
 "CANCEL" = "Cancel";
-"COREC" = "Co-Rec";
-"DIRECTORY" = "Directory";
 "DONE" = "Done";
-"GAMES" = "Games";
-"GENERAL" = "General";
-"LABS" = "Labs";
-"LANGUAGE" = "Language";
-"LIBRARY" = "Library";
+"INFORMATION" = "Info";
 "LOADING" = "Loading";
-"MAP" = "Map";
-"MENU" = "Menu";
-"MIN" = "min";
-"MYMAIL" = "MyMail";
-"NEWS" = "News";
 "NO" = "No";
-"PHOTOS" = "Photos";
-"RECENTPHOTOS" = "Recent Photos";
-"ROUTES" = "Routes";
-"ROUTETIME" = "Route                                                      Time";
-"SCHEDULE" = "Schedule";
 "SEARCH" = "Search";
-"SETTINGS" = "Settings";
-"STOPS" = "Stops";
-"STORE" = "Store";
-"VIDEOS" = "Videos";
-"WEATHER" = "Weather";
 "YES" = "Yes";
 
+// Localization Popup
 "LOCAL_TITLE" = "Localization takes effect after app relaunch";
 "LOCAL_MESSAGE" = "Do you wish to quit the app and tap on the app icon now (re-launch)?";
+
+
+// About
+"ABOUT" = "About";
+"ABOUTUS" = "About Us";
+
+// Bandwidth
+"BANDWIDTH" = "Bandwidth";
+"MYBANDWIDTH" = "My Bandwidth";
+
+// Blackboard
+"BLACKBOARD" = "Blackboard";
+
+// Bus
+"BOOKMARKS" = "Bookmarks";
+"BUS" = "Bus";
+"MIN" = "min";
+"ROUTES" = "Routes";
+"ROUTETIME" = "Route                                                      Time";
+"STOPS" = "Stops";
+
+// Co-Rec
+"COREC" = "Co-Rec";
+
+// Directory
+"DIRECTORY" = "Directory";
+
+// Games
+"GAMES" = "Games";
+
+// Labs
+"LABS" = "Labs";
+
+// Library
+"LIBRARY" = "Library";
+
+// Login
+"USERNAME" = "Username";
+"PASSWORD" = "Password";
+"SIGNIN" = "Sign In";
+
+// Map
+"CAMPUSMAP" = "Campus Map";
+"HYBRID" = "Hybrid";
+"MAP" = "Map";
+"MAPTYPE" = "Map Type";
+"SATELLITE" = "Satellite";
+"STANDARD" = "Standard";
+
+// Mail
+"MYMAIL" = "MyMail";
+
+// Menu
+"BREAKFAST" = "Breakfast";
+"DINNER" = "Dinner";
+"LUNCH" = "Lunch";
+"LOCATIONS" = "Locations";
+"MENU" = "Menu";
+
+// News
+"NEWS" = "News";
+
+// Photos
+"PHOTOS" = "Photos";
+"RECENTPHOTOS" = "Recent Photos";
+
+// Schedule
+"CLASS" = "Classes";
+"EXAM" = "Exams";
+"SCHEDULE" = "Schedule";
+
+// Settings
+"GENERAL" = "General";
+"LANGUAGE" = "Language";
+"SETTINGS" = "Settings";
+"SIGNOUT" = "Sign Out";
+
+// Store
+"STORE" = "Store";
+
+// Videos
+"VIDEOS" = "Videos";
+
+// Weather
+"WEATHER" = "Weather";

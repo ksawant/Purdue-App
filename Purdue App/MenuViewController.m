@@ -83,6 +83,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MenuDetailViewController *mdvc = [[MenuDetailViewController alloc] init];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

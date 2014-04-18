@@ -12,6 +12,7 @@
 		5E428D1A18D575D8003172DB /* DirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D1918D575D8003172DB /* DirectoryViewController.m */; };
 		5E428D1E18D62BF7003172DB /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D1D18D62BF7003172DB /* PhotoViewController.m */; };
 		5E428D2218D63090003172DB /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E428D2118D63090003172DB /* Album.m */; };
+		5E4DD1CD1901922B00DE2A89 /* MenuDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4DD1CC1901922B00DE2A89 /* MenuDetailViewController.m */; };
 		5E73BD0618DE75500093EE20 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0518DE75500093EE20 /* AboutViewController.m */; };
 		5E73BD0C18DE845B0093EE20 /* I18NUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0B18DE845B0093EE20 /* I18NUtil.m */; };
 		5E73BD1018DE84D40093EE20 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0F18DE84D40093EE20 /* SettingsViewController.m */; };
@@ -132,6 +133,8 @@
 		5E428D1D18D62BF7003172DB /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		5E428D2018D63090003172DB /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		5E428D2118D63090003172DB /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		5E4DD1CB1901922B00DE2A89 /* MenuDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDetailViewController.h; sourceTree = "<group>"; };
+		5E4DD1CC1901922B00DE2A89 /* MenuDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuDetailViewController.m; sourceTree = "<group>"; };
 		5E73BD0418DE75500093EE20 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		5E73BD0518DE75500093EE20 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		5E73BD0A18DE845B0093EE20 /* I18NUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I18NUtil.h; sourceTree = "<group>"; };
@@ -492,6 +495,8 @@
 			children = (
 				5EDB88FE18F8049C000738A1 /* MenuViewController.h */,
 				5EDB88FF18F8049C000738A1 /* MenuViewController.m */,
+				5E4DD1CB1901922B00DE2A89 /* MenuDetailViewController.h */,
+				5E4DD1CC1901922B00DE2A89 /* MenuDetailViewController.m */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -1053,6 +1058,7 @@
 				5EE9213318D0ECF4003EE2E6 /* DACircularProgressView.m in Sources */,
 				5EE9214918D0ECF4003EE2E6 /* SDWebImageCompat.m in Sources */,
 				5EE9212E18D0ECF4003EE2E6 /* MWPhoto.m in Sources */,
+				5E4DD1CD1901922B00DE2A89 /* MenuDetailViewController.m in Sources */,
 				5EE9215318D0ECF4003EE2E6 /* UIImageView+WebCache.m in Sources */,
 				5EE9208D18D0EC84003EE2E6 /* Reachability.m in Sources */,
 				5EE920C018D0ECD9003EE2E6 /* UIImage+MRImageEffects.m in Sources */,
