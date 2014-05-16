@@ -146,6 +146,7 @@
 		5E73BD1718DEB7D40093EE20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E73BD1918DEB8120093EE20 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5E73BD1B18DEB81D0093EE20 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5E884E70190835B600374C17 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E91CB7318F31FC400DA7635 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		5E91CB7418F31FC400DA7635 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		5E91CB7618F3A36200DA7635 /* CourseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInfo.h; sourceTree = "<group>"; };
@@ -989,6 +990,7 @@
 				en,
 				Base,
 				"zh-Hant",
+				ko,
 			);
 			mainGroup = 5EF3C72118BC0CB900015A27;
 			productRefGroup = 5EF3C72B18BC0CB900015A27 /* Products */;
@@ -1131,6 +1133,7 @@
 			children = (
 				5E73BD1718DEB7D40093EE20 /* en */,
 				5E73BD1B18DEB81D0093EE20 /* zh-Hant */,
+				5E884E70190835B600374C17 /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
