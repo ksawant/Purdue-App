@@ -150,19 +150,11 @@
             } else if ([buttonTitle isEqualToString:@"한국의"]) {
                 [I18NUtil setLanguage:@"ko"];
             }
-            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOCAL_TITLE", nil) message:NSLocalizedString(@"LOCAL_MESSAGE", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"NO", nil) otherButtonTitles:NSLocalizedString(@"YES", nil), nil] show];
+            [self refreshInterface];
         } else if ([actionSheet.title isEqualToString:NSLocalizedString(@"MAPTYPE", nil)]) {
             [[NSUserDefaults standardUserDefaults] setInteger:buttonIndex forKey:@"MapType"];
             [[NSUserDefaults standardUserDefaults] synchronize];
             [self refreshInterface];
-        }
-    }
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:NSLocalizedString(@"YES", nil)]) {
-        if ([alertView.title isEqualToString:NSLocalizedString(@"LOCAL_TITLE", nil)]) {
-            exit(0);
         }
     }
 }

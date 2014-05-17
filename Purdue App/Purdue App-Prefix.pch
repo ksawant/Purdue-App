@@ -43,7 +43,7 @@
 
 // Purdue Colors
 #define PUGoldColor_RealCl					[UIColor colorWithRed:177./255 green:148./255 blue:108./255 alpha:1]
-#define PUGoldColor_TabBar					[UIColor colorWithRed:200./255 green:160./255 blue:110./255 alpha:1]
+#define PUGoldColor_TabBar					[UIColor colorWithRed:220./255 green:176./255 blue:121./255 alpha:1]
 #define PUGoldColor_NavBar					[UIColor colorWithRed:177./255 green:148./255 blue:108./255 alpha:1]
 
 // DoubleMaps API

@@ -16,8 +16,6 @@
 		5E73BD0618DE75500093EE20 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0518DE75500093EE20 /* AboutViewController.m */; };
 		5E73BD0C18DE845B0093EE20 /* I18NUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0B18DE845B0093EE20 /* I18NUtil.m */; };
 		5E73BD1018DE84D40093EE20 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E73BD0F18DE84D40093EE20 /* SettingsViewController.m */; };
-		5E73BD1418DE9E830093EE20 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1218DE9E830093EE20 /* Main_iPad.storyboard */; };
-		5E73BD1518DE9E830093EE20 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1318DE9E830093EE20 /* Main_iPhone.storyboard */; };
 		5E73BD1618DEB7D40093EE20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1818DEB7D40093EE20 /* Localizable.strings */; };
 		5E73BD1A18DEB8120093EE20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E73BD1918DEB8120093EE20 /* InfoPlist.strings */; };
 		5E91CB7518F31FC400DA7635 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CB7418F31FC400DA7635 /* ScheduleViewController.m */; };
@@ -31,12 +29,17 @@
 		5E91CBBA18F6019000DA7635 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E91CBB918F6019000DA7635 /* MapKit.framework */; };
 		5E91CBBD18F6055B00DA7635 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CBBC18F6055B00DA7635 /* MapOverlay.m */; };
 		5E91CBC018F6061700DA7635 /* MapOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E91CBBF18F6061700DA7635 /* MapOverlayRenderer.m */; };
-		5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */; };
 		5EC07EA318D1598D00577F92 /* StopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC07EA218D1598D00577F92 /* StopDetailViewController.m */; };
+		5ED4F9E71927085300926E6C /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4F9DB1927085300926E6C /* ECPercentDrivenInteractiveTransition.m */; };
+		5ED4F9E81927085300926E6C /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4F9DD1927085300926E6C /* ECSlidingAnimationController.m */; };
+		5ED4F9E91927085300926E6C /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4F9E01927085300926E6C /* ECSlidingInteractiveTransition.m */; };
+		5ED4F9EA1927085300926E6C /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4F9E21927085300926E6C /* ECSlidingSegue.m */; };
+		5ED4F9EB1927085300926E6C /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4F9E41927085300926E6C /* ECSlidingViewController.m */; };
+		5ED4F9EC1927085300926E6C /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4F9E61927085300926E6C /* UIViewController+ECSlidingViewController.m */; };
+		5ED4F9EF19270D4D00926E6C /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4F9EE19270D4D00926E6C /* SideMenuViewController.m */; };
 		5EDB88E418F7CB86000738A1 /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88E318F7CB86000738A1 /* VideosViewController.m */; };
 		5EDB88E918F7D106000738A1 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88E818F7D106000738A1 /* AsyncImageView.m */; };
 		5EDB88ED18F7D50B000738A1 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88EC18F7D50B000738A1 /* FXBlurView.m */; };
-		5EDB88F018F7D5C9000738A1 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88EF18F7D5C9000738A1 /* SignInViewController.m */; };
 		5EDB88F318F7DB20000738A1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB88F218F7DB20000738A1 /* Accelerate.framework */; };
 		5EDB88F718F7DC10000738A1 /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB88F618F7DC10000738A1 /* UIViewController+CWPopup.m */; };
 		5EDB88F918F7DD0A000738A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDB88F818F7DD0A000738A1 /* QuartzCore.framework */; };
@@ -116,7 +119,6 @@
 		5EF3C73A18BC0CB900015A27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C73918BC0CB900015A27 /* main.m */; };
 		5EF3C73E18BC0CB900015A27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C73D18BC0CB900015A27 /* AppDelegate.m */; };
 		5EF3C74918BC0CB900015A27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C74818BC0CB900015A27 /* Images.xcassets */; };
-		5EF3C76618BC6A7700015A27 /* SampleWallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */; };
 		5EF3C76918BC6BC900015A27 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3C76818BC6BC900015A27 /* UIImage+ImageEffects.m */; };
 		5EF482E718E2261D0035C840 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF482E618E2261D0035C840 /* StoreViewController.m */; };
 		5EF944BD18E9E5540003F130 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF944BC18E9E5540003F130 /* WeatherViewController.m */; };
@@ -141,8 +143,6 @@
 		5E73BD0B18DE845B0093EE20 /* I18NUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I18NUtil.m; sourceTree = "<group>"; };
 		5E73BD0E18DE84D40093EE20 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5E73BD0F18DE84D40093EE20 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		5E73BD1218DE9E830093EE20 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		5E73BD1318DE9E830093EE20 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		5E73BD1718DEB7D40093EE20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E73BD1918DEB8120093EE20 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5E73BD1B18DEB81D0093EE20 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -168,18 +168,29 @@
 		5E91CBBC18F6055B00DA7635 /* MapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlay.m; sourceTree = "<group>"; };
 		5E91CBBE18F6061700DA7635 /* MapOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayRenderer.h; sourceTree = "<group>"; };
 		5E91CBBF18F6061700DA7635 /* MapOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayRenderer.m; sourceTree = "<group>"; };
-		5EB99F7818CFB1F60073C4E8 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
-		5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		5EC07EA118D1598D00577F92 /* StopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopDetailViewController.h; sourceTree = "<group>"; };
 		5EC07EA218D1598D00577F92 /* StopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopDetailViewController.m; sourceTree = "<group>"; };
+		5ED4F9DA1927085300926E6C /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		5ED4F9DB1927085300926E6C /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		5ED4F9DC1927085300926E6C /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
+		5ED4F9DD1927085300926E6C /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingAnimationController.m; sourceTree = "<group>"; };
+		5ED4F9DE1927085300926E6C /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingConstants.h; sourceTree = "<group>"; };
+		5ED4F9DF1927085300926E6C /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
+		5ED4F9E01927085300926E6C /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
+		5ED4F9E11927085300926E6C /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingSegue.h; sourceTree = "<group>"; };
+		5ED4F9E21927085300926E6C /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingSegue.m; sourceTree = "<group>"; };
+		5ED4F9E31927085300926E6C /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		5ED4F9E41927085300926E6C /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		5ED4F9E51927085300926E6C /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
+		5ED4F9E61927085300926E6C /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
+		5ED4F9ED19270D4D00926E6C /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		5ED4F9EE19270D4D00926E6C /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
 		5EDB88E218F7CB86000738A1 /* VideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosViewController.h; sourceTree = "<group>"; };
 		5EDB88E318F7CB86000738A1 /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
 		5EDB88E718F7D106000738A1 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		5EDB88E818F7D106000738A1 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		5EDB88EB18F7D50B000738A1 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		5EDB88EC18F7D50B000738A1 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
-		5EDB88EE18F7D5C9000738A1 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
-		5EDB88EF18F7D5C9000738A1 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		5EDB88F218F7DB20000738A1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		5EDB88F518F7DC10000738A1 /* UIViewController+CWPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CWPopup.h"; sourceTree = "<group>"; };
 		5EDB88F618F7DC10000738A1 /* UIViewController+CWPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CWPopup.m"; sourceTree = "<group>"; };
@@ -338,7 +349,6 @@
 		5EF3C73D18BC0CB900015A27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5EF3C74818BC0CB900015A27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5EF3C74F18BC0CB900015A27 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleWallpaper.png; sourceTree = "<group>"; };
 		5EF3C76718BC6BC900015A27 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		5EF3C76818BC6BC900015A27 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		5EF482E518E2261D0035C840 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
@@ -437,6 +447,26 @@
 			path = "Vurig Calendar";
 			sourceTree = "<group>";
 		};
+		5ED4F9D91927085300926E6C /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5ED4F9DA1927085300926E6C /* ECPercentDrivenInteractiveTransition.h */,
+				5ED4F9DB1927085300926E6C /* ECPercentDrivenInteractiveTransition.m */,
+				5ED4F9DC1927085300926E6C /* ECSlidingAnimationController.h */,
+				5ED4F9DD1927085300926E6C /* ECSlidingAnimationController.m */,
+				5ED4F9DE1927085300926E6C /* ECSlidingConstants.h */,
+				5ED4F9DF1927085300926E6C /* ECSlidingInteractiveTransition.h */,
+				5ED4F9E01927085300926E6C /* ECSlidingInteractiveTransition.m */,
+				5ED4F9E11927085300926E6C /* ECSlidingSegue.h */,
+				5ED4F9E21927085300926E6C /* ECSlidingSegue.m */,
+				5ED4F9E31927085300926E6C /* ECSlidingViewController.h */,
+				5ED4F9E41927085300926E6C /* ECSlidingViewController.m */,
+				5ED4F9E51927085300926E6C /* UIViewController+ECSlidingViewController.h */,
+				5ED4F9E61927085300926E6C /* UIViewController+ECSlidingViewController.m */,
+			);
+			path = ECSlidingViewController;
+			sourceTree = "<group>";
+		};
 		5EDB88E518F7CB8A000738A1 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,15 +492,6 @@
 				5EDB88EC18F7D50B000738A1 /* FXBlurView.m */,
 			);
 			path = FXBlurView;
-			sourceTree = "<group>";
-		};
-		5EDB88F118F7D5CC000738A1 /* Sign In */ = {
-			isa = PBXGroup;
-			children = (
-				5EDB88EE18F7D5C9000738A1 /* SignInViewController.h */,
-				5EDB88EF18F7D5C9000738A1 /* SignInViewController.m */,
-			);
-			name = "Sign In";
 			sourceTree = "<group>";
 		};
 		5EDB88F418F7DC10000738A1 /* CWPopup */ = {
@@ -776,6 +797,7 @@
 		5EE9217018D0EFD1003EE2E6 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5ED4F9D91927085300926E6C /* ECSlidingViewController */,
 				5EDB88F418F7DC10000738A1 /* CWPopup */,
 				5EDB88EA18F7D50B000738A1 /* FXBlurView */,
 				5EDB88E618F7D106000738A1 /* AsyncImageView */,
@@ -791,15 +813,6 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
-		5EE9217118D0EFDE003EE2E6 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				5EB99F7818CFB1F60073C4E8 /* TabBarViewController.h */,
-				5EB99F7918CFB1F60073C4E8 /* TabBarViewController.m */,
-			);
-			name = TabBar;
-			sourceTree = "<group>";
-		};
 		5EE9217218D0EFF2003EE2E6 /* UIImage extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -812,22 +825,20 @@
 		5EE9217318D0F00A003EE2E6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5EDB890518F809BE000738A1 /* Blackboard */,
-				5EF482E818E226200035C840 /* Store */,
-				5E73BD1118DE84DB0093EE20 /* Settings */,
 				5E73BD0718DE75540093EE20 /* About */,
-				5E428D1F18D62BFD003172DB /* Photo */,
+				5EDB88FD18F7F750000738A1 /* Bandwidth */,
+				5EDB890518F809BE000738A1 /* Blackboard */,
+				5EE9217718D0FE66003EE2E6 /* Bus */,
 				5E428D1B18D575E0003172DB /* Directory */,
 				5E428CF118D48E34003172DB /* Mail */,
-				5EE9217118D0EFDE003EE2E6 /* TabBar */,
-				5EF944BE18E9E5570003F130 /* Weather */,
-				5EDB88E518F7CB8A000738A1 /* Videos */,
 				5EE9206B18D0EBF8003EE2E6 /* Map */,
-				5EE9217718D0FE66003EE2E6 /* Bus */,
-				5EDB88FD18F7F750000738A1 /* Bandwidth */,
-				5EDB88F118F7D5CC000738A1 /* Sign In */,
 				5EDB890118F804A0000738A1 /* Menu */,
+				5E428D1F18D62BFD003172DB /* Photo */,
 				5EF482E918E227E20035C840 /* Schedule */,
+				5E73BD1118DE84DB0093EE20 /* Settings */,
+				5EF482E818E226200035C840 /* Store */,
+				5EDB88E518F7CB8A000738A1 /* Videos */,
+				5EF944BE18E9E5570003F130 /* Weather */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -898,6 +909,8 @@
 				5EE9217018D0EFD1003EE2E6 /* Libraries */,
 				5EF3C73C18BC0CB900015A27 /* AppDelegate.h */,
 				5EF3C73D18BC0CB900015A27 /* AppDelegate.m */,
+				5ED4F9ED19270D4D00926E6C /* SideMenuViewController.h */,
+				5ED4F9EE19270D4D00926E6C /* SideMenuViewController.m */,
 				5EE9217E18D11887003EE2E6 /* Objects */,
 				5EE9217318D0F00A003EE2E6 /* ViewControllers */,
 				5EE9217218D0EFF2003EE2E6 /* UIImage extensions */,
@@ -909,12 +922,9 @@
 		5EF3C73418BC0CB900015A27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5E73BD1218DE9E830093EE20 /* Main_iPad.storyboard */,
-				5E73BD1318DE9E830093EE20 /* Main_iPhone.storyboard */,
 				5E73BD1918DEB8120093EE20 /* InfoPlist.strings */,
 				5E73BD1818DEB7D40093EE20 /* Localizable.strings */,
 				5EF3C74818BC0CB900015A27 /* Images.xcassets */,
-				5EF3C76518BC6A7700015A27 /* SampleWallpaper.png */,
 				5EF3C73518BC0CB900015A27 /* Purdue App-Info.plist */,
 				5EF3C73918BC0CB900015A27 /* main.m */,
 				5EF3C73B18BC0CB900015A27 /* Purdue App-Prefix.pch */,
@@ -1011,13 +1021,10 @@
 				5EE9216618D0ED44003EE2E6 /* .gitignore in Resources */,
 				5E73BD1618DEB7D40093EE20 /* Localizable.strings in Resources */,
 				5EF3C74918BC0CB900015A27 /* Images.xcassets in Resources */,
-				5EF3C76618BC6A7700015A27 /* SampleWallpaper.png in Resources */,
-				5E73BD1418DE9E830093EE20 /* Main_iPad.storyboard in Resources */,
 				5EE9214318D0ECF4003EE2E6 /* LICENSE in Resources */,
 				5EE9214418D0ECF4003EE2E6 /* README.md in Resources */,
 				5EE9215418D0ECF4003EE2E6 /* MWPhotoBrowser.bundle in Resources */,
 				5E73BD1A18DEB8120093EE20 /* InfoPlist.strings in Resources */,
-				5E73BD1518DE9E830093EE20 /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1037,6 +1044,8 @@
 				5EE9213A18D0ECF4003EE2E6 /* PSTCollectionViewData.m in Sources */,
 				5EE920C118D0ECD9003EE2E6 /* MRActivityIndicatorView.m in Sources */,
 				5EE9213D18D0ECF4003EE2E6 /* PSTCollectionViewLayout.m in Sources */,
+				5ED4F9EB1927085300926E6C /* ECSlidingViewController.m in Sources */,
+				5ED4F9EC1927085300926E6C /* UIViewController+ECSlidingViewController.m in Sources */,
 				5EF3C76918BC6BC900015A27 /* UIImage+ImageEffects.m in Sources */,
 				5EE920C518D0ECD9003EE2E6 /* MRProgressOverlayView.m in Sources */,
 				5EE9213E18D0ECF4003EE2E6 /* PSTCollectionViewUpdateItem.m in Sources */,
@@ -1071,9 +1080,12 @@
 				5EE9213618D0ECF4003EE2E6 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				5EF3C73E18BC0CB900015A27 /* AppDelegate.m in Sources */,
 				5EF3C73A18BC0CB900015A27 /* main.m in Sources */,
+				5ED4F9E71927085300926E6C /* ECPercentDrivenInteractiveTransition.m in Sources */,
+				5ED4F9E91927085300926E6C /* ECSlidingInteractiveTransition.m in Sources */,
 				5EE9212D18D0ECF4003EE2E6 /* MWGridViewController.m in Sources */,
 				5EE9213418D0ECF4003EE2E6 /* MBProgressHUD.m in Sources */,
 				5E91CBC018F6061700DA7635 /* MapOverlayRenderer.m in Sources */,
+				5ED4F9EA1927085300926E6C /* ECSlidingSegue.m in Sources */,
 				5EDB890018F8049C000738A1 /* MenuViewController.m in Sources */,
 				5E91CBA518F49E3400DA7635 /* NSDate+convenience.m in Sources */,
 				5EE920C718D0ECD9003EE2E6 /* MRMessageInterceptor.m in Sources */,
@@ -1081,9 +1093,9 @@
 				5EE9209F18D0ECA3003EE2E6 /* FMDatabaseAdditions.m in Sources */,
 				5EDB88E918F7D106000738A1 /* AsyncImageView.m in Sources */,
 				5EE9217618D0FE5F003EE2E6 /* BusViewController.m in Sources */,
-				5EDB88F018F7D5C9000738A1 /* SignInViewController.m in Sources */,
 				5E91CB7518F31FC400DA7635 /* ScheduleViewController.m in Sources */,
 				5E428D1A18D575D8003172DB /* DirectoryViewController.m in Sources */,
+				5ED4F9EF19270D4D00926E6C /* SideMenuViewController.m in Sources */,
 				5EDB890418F809BA000738A1 /* BlackboardViewController.m in Sources */,
 				5E91CBBD18F6055B00DA7635 /* MapOverlay.m in Sources */,
 				5EE9214618D0ECF4003EE2E6 /* NSData+GIF.m in Sources */,
@@ -1091,7 +1103,6 @@
 				5E73BD1018DE84D40093EE20 /* SettingsViewController.m in Sources */,
 				5EE920C218D0ECD9003EE2E6 /* MRCircularProgressView.m in Sources */,
 				5EE9215018D0ECF4003EE2E6 /* UIImage+GIF.m in Sources */,
-				5EB99F7A18CFB1F60073C4E8 /* TabBarViewController.m in Sources */,
 				5E91CBA618F49E3400DA7635 /* NSMutableArray+convenience.m in Sources */,
 				5EE9213818D0ECF4003EE2E6 /* PSTCollectionViewCell.m in Sources */,
 				5EE920A318D0ECA3003EE2E6 /* FMResultSet.m in Sources */,
@@ -1116,6 +1127,7 @@
 				5EE9214B18D0ECF4003EE2E6 /* SDWebImageDownloader.m in Sources */,
 				5EE9213F18D0ECF4003EE2E6 /* PSTGridLayoutInfo.m in Sources */,
 				5E73BD0618DE75500093EE20 /* AboutViewController.m in Sources */,
+				5ED4F9E81927085300926E6C /* ECSlidingAnimationController.m in Sources */,
 				5EE9214C18D0ECF4003EE2E6 /* SDWebImageDownloaderOperation.m in Sources */,
 				5E91CBAA18F49E3400DA7635 /* VRGCalendarView.m in Sources */,
 				5EE9213B18D0ECF4003EE2E6 /* PSTCollectionViewFlowLayout.m in Sources */,

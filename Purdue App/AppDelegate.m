@@ -8,17 +8,165 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    NSMutableArray *categoryNames;
+    NSIndexPath *selectedIP;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UITabBar appearance] setTintColor:PUGoldColor_TabBar];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     [[UINavigationBar appearance] setBarTintColor:PUGoldColor_NavBar];
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     
     [I18NUtil initialize];
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    MailWebViewController *topViewController = [[MailWebViewController alloc] init];
+    SideMenuViewController *leftViewController = [[SideMenuViewController alloc] init];
+    leftViewController.tableView.delegate = self;
+    
+    topViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SideMenu"] style:UIBarButtonItemStyleBordered target:self action:@selector(showMenu:)];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:topViewController];
+    
+    // configure sliding view controller
+    self.slidingViewController = [ECSlidingViewController slidingWithTopViewController:navigationController];
+    self.slidingViewController.underLeftViewController = leftViewController;
+    
+    // enable swiping on the top view
+    [navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
+    
+    // configure anchored layout
+    self.slidingViewController.anchorRightPeekAmount  = 80.0;
+    
+    self.window.rootViewController = self.slidingViewController;
+    [self.window makeKeyAndVisible];
+    
+    categoryNames = [NSMutableArray arrayWithObjects:
+                     NSLocalizedString(@"ACADEMICS", nil),
+                     NSLocalizedString(@"LIFE", nil),
+                     NSLocalizedString(@"MAPS", nil),
+                     NSLocalizedString(@"MEDIA", nil),
+                     NSLocalizedString(@"OTHERS", nil),
+                     nil];
+    
     return YES;
+}
+
+- (IBAction)showMenu:(id)sender {
+    if (self.slidingViewController.currentTopViewPosition == 2) {
+        [self.slidingViewController anchorTopViewToRightAnimated:YES];
+    } else if (self.slidingViewController.currentTopViewPosition == 1){
+        [self.slidingViewController resetTopViewAnimated:YES];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 25;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 25)];
+    headerLabel.font = [UIFont fontWithName:@"Avenir" size:12];
+    headerLabel.text = [NSString stringWithFormat:@"  %@",[categoryNames[section] uppercaseString]];
+    headerLabel.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1.0];
+    headerLabel.textColor = [UIColor colorWithWhite:0.7 alpha:1];
+    return headerLabel;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (selectedIP) {
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:selectedIP];
+        cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        for (UIView *view in cell.contentView.subviews) {
+            if ([view isKindOfClass:[UIImageView class]]) {
+                UIImageView *imageView = (UIImageView *)view;
+                imageView.image = [self maskImage:imageView.image withColor:[UIColor whiteColor]];
+            }
+        }
+    }
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.backgroundColor = [UIColor colorWithWhite:0.2 alpha:0.8];
+    cell.textLabel.textColor = PUGoldColor_RealCl;
+    for (UIView *view in cell.contentView.subviews) {
+        if ([view isKindOfClass:[UIImageView class]]) {
+            UIImageView *imageView = (UIImageView *)view;
+            imageView.image = [self maskImage:imageView.image withColor:PUGoldColor_RealCl];
+        }
+    }
+    
+    UIViewController *topViewController;
+    if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"BLACKBOARD", nil)]) {
+        topViewController = [BlackboardViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"MYMAIL", nil)]) {
+        topViewController = [MailWebViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"SCHEDULE", nil)]) {
+        topViewController = [ScheduleViewController new];
+    }
+    
+    else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"BANDWIDTH", nil)]) {
+        topViewController = [BandwidthViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"BUS", nil)]) {
+        topViewController = [BusViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"COREC", nil)]) {
+        //topViewController = [CorecViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"GAMES", nil)]) {
+        //topViewController = [MailWebViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"MENU", nil)]) {
+        topViewController = [MenuViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"NEWS", nil)]) {
+        //topViewController = [NewsViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"WEATHER", nil)]) {
+        topViewController = [WeatherViewController new];
+    }
+    
+    else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"LABS", nil)]) {
+        //topViewController = [LabsViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"LIBRARY", nil)]) {
+        //topViewController = [MailWebViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"MAP", nil)]) {
+        topViewController = [MapViewController new];
+    }
+    
+    else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"PHOTOS", nil)]) {
+        topViewController = [PhotoViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"VIDEOS", nil)]) {
+        topViewController = [VideosViewController new];
+    }
+    
+    else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"ABOUT", nil)]) {
+        topViewController = [AboutViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"DIRECTORY", nil)]) {
+        topViewController = [DirectoryViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"SETTINGS", nil)]) {
+        topViewController = [SettingsViewController new];
+    } else if ([cell.textLabel.text isEqualToString:NSLocalizedString(@"STORE", nil)]) {
+        topViewController = [StoreViewController new];
+    }
+    
+    topViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SideMenu"] style:UIBarButtonItemStyleBordered target:self action:@selector(showMenu:)];
+    [self.slidingViewController setTopViewController:[[UINavigationController alloc] initWithRootViewController:topViewController]];
+    selectedIP = indexPath;
+    [self.slidingViewController resetTopViewAnimated:YES];
+}
+
+- (UIImage *)maskImage:(UIImage *)image withColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, image.scale);
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    [image drawInRect:rect];
+    CGContextSetFillColorWithColor(c, [color CGColor]);
+    CGContextSetBlendMode(c, kCGBlendModeSourceAtop);
+    CGContextFillRect(c, rect);
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return result;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
